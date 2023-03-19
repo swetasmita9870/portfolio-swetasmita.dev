@@ -1,0 +1,16 @@
+export const Profile = "/images/profile_photo1.png";
+export const Html = "/images/icons8-html-5.svg";
+export const Css = "/images/icons8-css3.svg";
+export const Javascript = "/images/icons8-javascript.svg";
+export const Bootstarp = "/images/icons8-bootstrap.svg";
+export const redux = "/images/icons8-redux.svg";
+export const react = "/images/reactjs-icon.svg";
+export const nextJs = "/images/next-js_1.svg";
+export const materialui = "/images/icons8-material-ui.svg";
+export const GitHub = "/images/icons8-github.svg";
+export const SIGNUP_BANNER_CREATOR_1 = "/images/marius-niveri-rfg4l6_lu3c-unsplash.jpg";
+export const SIGNUP_BANNER_CREATOR_2 = "/images/safar-safarov-LKsHwgzyk7c-unsplash.jpg";
+export const SIGNUP_BANNER_CREATOR_3 = "/images/image4.jpg";
+export const netlify = "/images/netflix.png";
+export const crud = "/images/crud.png";
+export const forkify = "/images/forkify.png";
