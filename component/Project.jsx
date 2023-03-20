@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import { crud, forkify, netlify, Profile } from '../config';
+import { crud, forkify, netlify, Profile } from '../lib/config';
 
 const Project = () => {
   const router = useRouter();

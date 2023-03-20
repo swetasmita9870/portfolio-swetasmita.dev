@@ -1,5 +1,5 @@
 import React from 'react'
-import { Profile } from '../config'
+import { Profile } from '../lib/config'
 
 const Dvhomecomp1 = () => {
   return (

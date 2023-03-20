@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
-import DvHeader from './component/DvHeader'
-import { SIGNUP_BANNER_CREATOR_1, SIGNUP_BANNER_CREATOR_2, SIGNUP_BANNER_CREATOR_3 } from './config'
+import DvHeader from '../component/DvHeader';
+import { SIGNUP_BANNER_CREATOR_1, SIGNUP_BANNER_CREATOR_2, SIGNUP_BANNER_CREATOR_3 } from '../lib/config'
 
 const Blog = () => {
   const signImageList = [
