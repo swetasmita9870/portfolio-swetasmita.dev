@@ -9,7 +9,7 @@ const Dvhomecomp1 = () => {
           <h1 className='text-shadow'>Hello 👋 I'm</h1>
           <section className="animation">
             <div className="first"><div className='text-shadow text-center'>Swetasmita Ranjan Sahoo 😎</div></div>
-            <div className="second"><div className='text-shadow text-center'>FonteEnd Developer 🧑‍💻</div></div>
+            <div className="second"><div className='text-shadow text-center'>Frontend Developer 🧑‍💻</div></div>
             <div className="third"><div className='text-shadow text-center'>Web Developer ✡️</div></div>
           </section>
         </div>
