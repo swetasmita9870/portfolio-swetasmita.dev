@@ -1,20 +1,30 @@
 
 import { useRouter } from 'next/router'
 import React from 'react'
+import { useIsMobileView } from '../hook/mobileview';
+import { Logo } from '../lib/config';
 
 const DvHeader = () => {
   const router = useRouter();
+  const isMobile = useIsMobileView();
   return (
-    <div className='col-12 d-flex justify-content-between' style={{ height: "10vh", background: "#000" }}>
-      <div>
-        <h2 className='text-center pt-3 px-2 headingName'>SWETASMITA RANJAN SAHOO</h2>
+    <div className='col-12 d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "#000" }}>
+      <div className='col-6'>
+        <img
+          src={Logo}
+          height={100}
+          width={300}
+          className='ml-5'
+          style={{ objectFit: "contain" }}
+          alt="logo"
+        />
       </div>
-      <div className='d-flex justify-content-between px-5 pt-3'>
-        <li className='text-white list_none'>Home</li>
+      {!isMobile && <div className='d-flex justify-content-between float-right m-auto'>
+        <li className='text-white  list_none'>Home</li>
         <li className='text-white list_none' onClick={() => router.push('/blog')} >Blog</li>
         <li className='text-white list_none'>Resume</li>
         <li className='text-white list_none'>contact</li>
-      </div>
+      </div>}
       <style jsx>{`
       .list_none{
         list-style-type:none;
@@ -31,7 +41,7 @@ const DvHeader = () => {
       .headingName {
         font-weight: 700;
         text-align: center;
-        font-size: 40px;
+        font-size: ${isMobile ? "18px" : "40px"};
         font-family: Hack, sans-serif;
         text-transform: uppercase;
         background: linear-gradient(90deg, #000, #fff, #000);
