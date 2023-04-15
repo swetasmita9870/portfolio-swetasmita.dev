@@ -123,7 +123,9 @@ a {
   width: 100%;
   background: var(--l_app_bg);
 }
-
+.primary-text{
+  color: yellow;
+}
 .sticky {
   position: sticky;
   z-index: 101;

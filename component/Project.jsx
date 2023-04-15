@@ -4,53 +4,53 @@ import { crud, forkify, netlify, Profile } from '../lib/config';
 
 const Project = () => {
   const router = useRouter();
+  let projectData = [
+    {
+      name:"Forkify Recipe",
+      image:forkify,
+      url:"https://liku-swetasmita-food-order.netlify.app"
+    },
+    {
+      name:"Crud Operation",
+      image:crud,
+      url:"https://swetasmita-storage-validation.netlify.app/"
+    },
+    {
+      name:"imdb movie search",
+      image:netlify,
+      url:"https://swetasmita-netflix-movie-search-app.netlify.app/"
+    }
+  ]
   return (
     <>
       <div className='bg-dark'>
         <h2 className='text-center py-3 text-white'>My Projects</h2>
-        <div className='d-flex align-items-center w-100 justify-content-around'>
-          <div className='col-3 bulk__message__card' style={{ height: "68vh" }} onClick={() => router.push('https://liku-swetasmita-food-order.netlify.app')}>
+        <div className='skillstab'>
+          {projectData.map((data,index)=>{
+          return  <div key={index} className='bulk__message__card1' onClick={() => router.push(data.url)}>
             <div className='d-flex justify-content-center align-items-center pt-3'>
-              <img style={{ width: "40vh", height: "20vh", borderRadius: "10px" }} src={forkify} />
+              <img className='imageDiv' src={data.image} />
             </div>
-            <h3 className='text-left px-3 pt-3 text-white text-uppercase headingName'>Forkify Recipe</h3>
-            <p className='text-left  px-3  pt-3 text-white overflow-hidden'>A delicious journey through food. This vanilla JavaScript application explores the world of recipe food data, interacting with the Forkify API to fetch and display....</p>
-            <div className='d-flex align-items-center m-auto col-12 px-2'>
-              <img src={Profile} style={{ width: "7vh", height: "7vh", borderRadius: "50%" }} />
-              <h5 className='text-white pl-3 text-shadow'>Swetasmita Ranjan Sahoo</h5>
-            </div>
+            <h3 className='text-left px-3 pt-3 text-white text-uppercase headingName'>{data.name}</h3>
           </div>
-          <div className='col-3  bulk__message__card ' style={{ height: "68vh" }} onClick={() => router.push('https://swetasmita-storage-validation.netlify.app/')}>
-            <div className='d-flex justify-content-center align-items-center pt-3'>
-              <img style={{ width: "40vh", height: "20vh", borderRadius: "10px" }} src={crud} />
-            </div>
-            <h3 className='text-left px-3 pt-3 text-white text-uppercase headingName'>Crud Operation</h3>
-            <p className='text-left  px-3  pt-3 text-white'>Within computer programming, the acronym CRUD stands for create, read, update, and delete. These are the four basic functions of persistent storage.</p>
-            <div className='d-flex align-items-center m-auto col-12 px-2'>
-              <img src={Profile} style={{ width: "7vh", height: "7vh", borderRadius: "50%" }} />
-              <h5 className='text-white pl-3 text-shadow'>Swetasmita Ranjan Sahoo</h5>
-            </div>
-          </div>
-          <div className='col-3  bulk__message__card' style={{ height: "68vh" }} onClick={() => router.push('https://swetasmita-netflix-movie-search-app.netlify.app/')}>
-            <div className='d-flex justify-content-center align-items-center pt-3'>
-              <img style={{ width: "40vh", height: "20vh", borderRadius: "10px" }} src={netlify} />
-            </div>
-            <h3 className='text-left px-3 pt-3 text-white text-uppercase headingName'>imdb movie search</h3>
-            <p className='text-left  px-3  pt-3 text-white'>IMDb is the world's most popular and authoritative source for movie, TV, and celebrity information. Watch trailers, get showtimes, and ......</p>
-            <div className='d-flex align-items-center m-auto col-12 px-2'>
-              <img src={Profile} style={{ width: "7vh", height: "7vh", borderRadius: "50%" }} />
-              <h5 className='text-white pl-3 text-shadow'>Swetasmita Ranjan Sahoo</h5>
-            </div>
-          </div>
+          })}
+          
         </div>
         <style jsx>{`
-   :global(.bulk__message__card){
+   :global(.bulk__message__card1){
     background: linear-gradient(45deg, #023, transparent) #000;
     cursor:pointer;
     border-radius:22px;
    }
+   .skillstab{
+    display:flex;
+    justify-content: center;
+    gap:3rem;
+    flex-wrap:wrap;
+    width:100%;
+  }
    .text-shadow{text-shadow: 5px 6px 8px black;}
-   .bulk__message__card:hover, .bulk__message__card:focus {
+   .bulk__message__card1:hover, .bulk__message__card1:focus {
     background-color:#e91 ;
     color: #000;
   }
@@ -77,6 +77,26 @@ const Project = () => {
     background-size: 80%;
     animation: shine 8s linear infinite;
     position: relative;
+  }
+  .imageDiv{
+    width: 20rem;
+    height: 10rem; 
+    borderRadius: 10px;
+  }
+  @media only screen and (max-width: 767px) {
+    /* CSS rules for phone devices */
+    :global(.bulk__message__card1){
+      background: linear-gradient(90deg, #023, transparent) #000;
+      cursor:pointer;
+      border-radius:22px;
+      padding:1rem;
+      width:75%;
+     }
+     .imageDiv{
+      width: 10rem;
+      height: 5rem; 
+      borderRadius: 10px;
+    }
   }
    `}</style>
       </div>
