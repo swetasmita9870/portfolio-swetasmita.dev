@@ -22,5 +22,8 @@
     "react-toastify": "^9.1.1",
     "slick-carousel": "^1.8.1",
     "tooltip": "^1.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }
