@@ -19,9 +19,9 @@ import React from "react";
 // }));
 
 export default function Footer() {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
-    <div className={`${classes.root} bg-dark`}>
+    <div className={`bg-dark`}>
       {/* <h2 className="text-center primary-text text-uppercase">Contact</h2>
       <Grid container direction="row" justify="center" alignItems="center">
         <Grid item xs={12}>
