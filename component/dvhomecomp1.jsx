@@ -1,10 +1,13 @@
 import React from 'react'
 import { Profile } from '../lib/config'
+import { useIsMobileView } from '../hook/mobileview'
 
 const Dvhomecomp1 = () => {
+  const mobile = useIsMobileView();
   return (
-    <div className='col-12 d-flex' style={{ height: "80vh" }}>
-      <div className='col-6 bg-dark d-flex justify-content-center align-items-center' >
+    <div className='w-100 bg-dark'>
+      <div className='d-flex flex-wrap justify-content-center'>
+      <div className='bg-dark d-flex justify-content-center align-items-center' >
         <div className=' flex-column container'>
           <h1 className='text-shadow'>Hello 👋 I'm</h1>
           <section className="animation">
@@ -15,8 +18,9 @@ const Dvhomecomp1 = () => {
         </div>
       </div>
 
-      <div className='col-6 bg-dark d-flex justify-content-center align-items-center position-relative'>
+      <div className='bg-dark d-flex justify-content-center align-items-center position-relative'>
         <img className='home-img-inner' width={"50%"} src={Profile} />
+      </div>
       </div>
       <style jsx>{`
       .text-shadow{
@@ -71,6 +75,22 @@ const Dvhomecomp1 = () => {
         80% {margin-top: -5.62rem;}
         90% {margin-top: 0;}
         100% {margin-top: 0;}
+      }
+      @media only screen and (max-width: 767px) {
+        /* CSS rules for phone devices */
+        .container{
+          height:33vh;
+          font-size: 1.26rem;
+        }
+        .animation > div > div {
+          padding: 0.25rem 0.5rem;
+          height:3.81rem;
+          margin-bottom: 3.81rem;
+          display:inline-block;
+        }
+        .home-img-inner{
+          padding-bottom:5rem;
+        }
       }
       `}</style>
     </div>

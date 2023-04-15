@@ -49,6 +49,7 @@ const Icon = (props) => {
         width={`${props.width || props.size}${props.unit || "px"}`}
         height={`${props.height || props.size}${props.unit || "px"}`}
         viewBox={props.viewBox || "0 0 27.941 27.900"}
+        className={props.className}
         fill={
           ishovered
             ? props.hoverColor

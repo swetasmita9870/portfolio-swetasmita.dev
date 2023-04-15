@@ -20,18 +20,19 @@ const Card = (props) => {
       {/* <h2 className='m-0 text-center text-white'>Live Timer</h2> */}
       {/* <h1 className='m-0 text-center headingName py-5'>{`${date.toLocaleTimeString()}`}</h1> */}
       {/* </div> */}
-      <div className='bg-dark'><h2 style={{ fontFamily: "sans-serif" }} className='bg_dark text-center text-white pb-5'>About Me!</h2>
-        <div className='d-flex align-items-center w-100 justify-content-around'>
-          <div className='col-3 bulk__message__card' style={{ height: "30vh" }}>
+      <div className='bg-dark d-flex flex-column justify-content-center align-items-center'>
+        <h2 style={{ fontFamily: "sans-serif" }} className='bg_dark text-center primary-text pb-5'>About Me!</h2>
+        <div className='d-flex align-items-center col-12 justify-content-center flex-wrap card_container'>
+          <div className='bulk__message__card'>
             <h5 className='text-left px-3 pt-3 text-white text-shadow'>Experimental Results</h5>
             <li className='text-left  px-3  pt-3 text-white'>Designed and implemented front-end architecture for a new web application.</li>
             <li className='text-left  px-3  pt-3 text-white'>Created reusable components using React.js.</li>
           </div>
-          <div className='col-3  bulk__message__card ' style={{ height: "30vh" }}>
+          <div className='bulk__message__card'>
             <h5 className='text-left px-3 pt-3 text-white text-shadow'>Creative</h5>
             <li className='text-left  px-3  pt-3 text-white'>Optimized components for performance.</li>
             <li className='text-left  px-3  pt-3 text-white'>Debugged front-end code.</li>          </div>
-          <div className='col-3  bulk__message__card' style={{ height: "30vh" }}>
+          <div className='bulk__message__card'>
             <h5 className='text-left px-3 pt-3 text-white text-shadow'>Experimental Results</h5>
             <li className='text-left  px-3  pt-3 text-white'>Worked with back-end developers to integrate front-end code with back.</li>
             <li className='text-left  px-3  pt-3 text-white'>Integrate New Features.</li>          </div>
@@ -42,6 +43,12 @@ const Card = (props) => {
       background: linear-gradient(90deg, #023, transparent) #000;
       cursor:pointer;
       border-radius:22px;
+      padding:1rem;
+      width:25%;
+      height:30vh;
+     }
+     .card_container{
+      gap:3rem;
      }
      .bulk__message__card:hover, .bulk__message__card:focus {
       background-color: #e91e63;
@@ -61,7 +68,17 @@ const Card = (props) => {
         filter: hue-rotate(360deg);
       }
     }
-
+    @media only screen and (max-width: 767px) {
+      /* CSS rules for phone devices */
+      :global(.bulk__message__card){
+        background: linear-gradient(90deg, #023, transparent) #000;
+        cursor:pointer;
+        border-radius:22px;
+        padding:1rem;
+        width:75%;
+        height:40vh;
+       }
+    }
      `}</style>
     </>
   )

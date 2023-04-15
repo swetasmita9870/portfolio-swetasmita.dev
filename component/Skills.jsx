@@ -50,15 +50,14 @@ const Skills = () => {
           return <div className='position-relative'>
             <div className="skilBox align-items-center postition-absolute">
               <div className='d-flex align-item-center justify-content-center col-12 pt-4'>
-                <Icon
-                  icon={`${data.Logo}#${data.id}`}
-                  width={6}
-                  height={6}
-                  unit="vw"
+                <img
+                  src={`${data.Logo}`}
+                  className="iconclass"
+                  // unit="vw"
                   alt="wallet_icon"
                 />
               </div>
-              <h3 className='text-center text-white text-shadow'>{data.Name}</h3>
+              <h3 className='text-center primary-text'>{data.Name}</h3>
             </div>
           </div>
         })}
@@ -71,6 +70,10 @@ const Skills = () => {
           gap:3rem;
           flex-wrap:wrap;
           width:100%;
+        }
+        .iconclass{
+          width:15vh;
+          height:15vh;
         }
         .skilBox{
           height:30vh;
@@ -119,6 +122,17 @@ const Skills = () => {
       @keyframes spin {
           from {transform:rotate(0deg);}
           to {transform:rotate(360deg);}
+      }
+      @media only screen and (max-width: 767px) {
+        /* CSS rules for phone devices */
+        .skilBox{
+          width:20vh;
+          height:20vh;
+        }
+        .iconclass{
+          width:10vh;
+          height:10vh;
+        }
       }
         `}
       </style>

@@ -34,12 +34,12 @@ const Form = () => {
         <div className='d-flex flex-wrap flex-column justify-content-center align-items-center'>
           <div className='d-flex flex-wrap flex-column'>
             <form ref={form} onSubmit={sendEmail} className='d-flex flex-wrap flex-column'>
-              <label className='text-white m-0'>Name<span className='text-danger'>*</span></label>
-              <input type="text" name="user_name" className='inputfield' />
-              <label className='text-white m-0'>Email<span className='text-danger'>*</span></label>
-              <input type="email" name="user_email" className='inputfield' />
-              <label className='text-white m-0'>Please Tell Me About Yourself and Your Project<span className='text-danger'>*</span></label>
-              <textarea name="message" className='inputfield' />
+              <label className='text-white fntSz14 m-0'>Name<span className='text-danger'>*</span></label>
+              <input type="text" name="user_name" placeholder='Enter Your Name' className='inputfield' />
+              <label className='text-white fntSz14 m-0'>Email<span className='text-danger'>*</span></label>
+              <input type="email" name="user_email" placeholder='Enter Your Email' className='inputfield' />
+              <label className='text-white fntSz14 m-0'>Please Tell Me About Yourself and Your Project<span className='text-danger'>*</span></label>
+              <textarea name="message" className='inputfield' placeholder='Enter Your Query' />
               <input type="submit" value="Send" className='btn_follow' />
             </form>
             <ToastContainer
@@ -62,13 +62,18 @@ const Form = () => {
         <style jsx>{`
         .inputfield{
           background:black;
-          border-bottom:2px solid white;
           outline:none;
           width:30vw;
           color:white;
           border-radius:6px;
           box-shadow:none;
           margin-bottom:3vh;
+          border:none;
+        }
+        @media only screen and (max-width: 767px) {
+          .inputfield{
+            width:90vw;
+          }
         }
         `}</style>
       </div>

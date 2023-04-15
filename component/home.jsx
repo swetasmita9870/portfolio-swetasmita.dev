@@ -4,6 +4,7 @@ import Dvhomecomp1 from './dvhomecomp1'
 import Form from './Form'
 import Project from './Project'
 import Skills from './Skills'
+import Footer from './Footer'
 
 const DvHome = () => {
   return (
@@ -13,6 +14,9 @@ const DvHome = () => {
       <Skills />
       <Project />
       <Form />
+      <footer>
+        <Footer/>
+      </footer>
     </>
   )
 }
