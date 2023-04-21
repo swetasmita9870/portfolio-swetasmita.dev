@@ -1,76 +1,67 @@
 import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
-// import { Grid, Link } from "@material-ui/core";
+import { Facebbok, GitHub, Gmail, Instagram, Whatsapp, Youtube } from "../lib/config";
 
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     backgroundColor: "#f7f7f7",
-//     padding: theme.spacing(1),
-//   },
-//   socialIcons: {
-//     display: "flex",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     flexWrap:"wrap",
-//     "& > *": {
-//       margin: theme.spacing(2),
-//     },
-//   },
-// }));
 
 export default function Footer() {
-  // const classes = useStyles();
+  let fotericons = [
+    {
+      name: "Facebook",
+      logo: Facebbok
+    },
+    {
+      name: "WhatsApp",
+      logo: Whatsapp
+    },
+    {
+      name: "InstaGram",
+      logo: Instagram
+    },
+    {
+      name: "Gmail",
+      logo: Gmail
+    },
+    {
+      name: "Youtube",
+      logo: Youtube
+    },
+    {
+      name: "GitHub",
+      logo: GitHub
+    },
+  ]
   return (
     <div className={`bg-dark`}>
-      {/* <h2 className="text-center primary-text text-uppercase">Contact</h2>
-      <Grid container direction="row" justify="center" alignItems="center">
-        <Grid item xs={12}>
-          <div className={classes.socialIcons}>
-<div className="socialMedia" >
-<Link href="https://www.facebook.com/" target="_blank">
-              <FacebookIcon style={{color:"#1877F2"}} />
-            </Link>
-</div>
-<div className="socialMedia">
-<Link href="https://www.instagram.com/" target="_blank">
-              <InstagramIcon style={{color:"#EE1D51"}} />
-            </Link>
-</div>
-<div className="socialMedia">
-<Link href="https://www.linkedin.com/" target="_blank">
-              <LinkedInIcon style={{color:"#0A66C2"}} />
-            </Link>
-</div>
-<div className="socialMedia">
-<Link href="https://twitter.com/" target="_blank">
-              <TwitterIcon style={{color:"#1DA1F2"}} />
-            </Link>
-</div>
-<div className="socialMedia">
-<Link href="https://twitter.com/" target="_blank">
-              <WhatsApp style={{color:"#25D366"}} />
-            </Link>
-</div>
+      <h2 className="text-center">Contact Details</h2>
+      <div className="rowx">
+        <div className=" d-flex justify-content-center align-items-center py-4" style={{ gap: "3vh" }}>
+          {
+            fotericons.map((data) => {
+              return <div className="d-flex  align-items-center">
+                <div style={{ background: "#5e6a76", borderRadius: "50%", }} className="d-flex justify-content-center align-items-center socialMedia">
+                  <img src={data.logo} className="logofoo" />
+                </div>
 
+                {/* <p className="text-white">{data.name}</p> */}
+              </div>
 
+            })
+          }
+        </div>
 
-          </div>
-        </Grid>
-      </Grid> */}
+      </div>
       <div className="col-12 d-flex align-items-center justify-content-center">
       <p className="text-white text-center textContainer">©Swetasmita Ranjan Sahoo 2023. All Rights Reserved.
 
 Feel free to customize this text by replacing "Swetasmita Ranjan Sahoo" with your own name or company name, and updating the 2023 to the current year.</p>
       </div>
       <style jsx>{`
-      :global(.MuiSvgIcon-root){
-        width:4rem;
-        height:3rem;
-        padding-top:2vh;
+      .logofoo{
+        height:4vh;
+        width:4vh;
       }
       .socialMedia{
-        height:4rem;
-        width:4rem;
+        height:3rem;
+        width:3rem;
         background:black;
         border-radius:50%;
         box-shadow: 0px 3px 15px yellow;
@@ -79,11 +70,6 @@ Feel free to customize this text by replacing "Swetasmita Ranjan Sahoo" with you
         width:66.66%;
       }
       @media only screen and (max-width: 767px) {
-        :global(.MuiSvgIcon-root){
-          width:2rem;
-          height:1.5rem;
-          padding-top:1vh;
-        }
         .socialMedia{
           height:2rem;
           width:2rem;
@@ -93,7 +79,6 @@ Feel free to customize this text by replacing "Swetasmita Ranjan Sahoo" with you
         }
         .textContainer{
           width:86.66%;
-          padding-bottom:20vh;
         }
       }
       `}</style>
