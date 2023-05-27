@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import React from 'react'
 import { crud, forkify, netlify, Profile } from '../lib/config';
+import ProjectTile from './customComponent/ProjectTile';
 
 const Project = () => {
   const router = useRouter();
@@ -8,31 +9,35 @@ const Project = () => {
     {
       name:"Forkify Recipe",
       image:forkify,
-      url:"https://liku-swetasmita-food-order.netlify.app"
+      url: "https://liku-swetasmita-food-order.netlify.app",
+      git: "#",
+      desc: "It utilizes the Forkify API to provide users with a platform to search for recipes, save their favorite recipes, and create shopping lists."
     },
     {
       name:"Crud Operation",
       image:crud,
-      url:"https://swetasmita-storage-validation.netlify.app/"
+      url: "https://swetasmita-storage-validation.netlify.app/",
+      git: "https://github.com/swetasmita9870/storage-validation-using-redux",
+      desc: "The main objective of this project is to validate form data and store it in different storage options such as local storage, session storage, and cookie storage based on the user's selection."
     },
     {
       name:"imdb movie search",
       image:netlify,
-      url:"https://swetasmita-netflix-movie-search-app.netlify.app/"
+      url: "https://swetasmita-netflix-movie-search-app.netlify.app/",
+      git: "https://github.com/swetasmita9870/movie-Search-app-using-saga",
+      desc: "The main objective of this project is to validate form data and store it in different storage options such as local storage, session storage, and cookie storage based on the user's selection."
     }
   ]
   return (
     <>
       <div className='bg-dark'>
-        <h2 className='text-center py-3 text-white'>My Projects</h2>
+        <h2 className='text-center py-5 text-white'>My Projects</h2>
         <div className='skillstab'>
           {projectData.map((data,index)=>{
-          return  <div key={index} className='bulk__message__card1' onClick={() => router.push(data.url)}>
-            <div className='d-flex justify-content-center align-items-center pt-3'>
-              <img className='imageDiv' src={data.image} />
-            </div>
-            <h3 className='text-left px-3 pt-3 text-white text-uppercase headingName'>{data.name}</h3>
-          </div>
+            return (<ProjectTile
+              key={index}
+              data={data}
+            />)
           })}
           
         </div>
@@ -96,6 +101,9 @@ const Project = () => {
       width: 10rem;
       height: 5rem; 
       borderRadius: 10px;
+    }
+    .skillstab{
+
     }
   }
    `}</style>

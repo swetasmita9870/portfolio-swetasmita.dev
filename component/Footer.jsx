@@ -31,7 +31,7 @@ export default function Footer() {
   ]
   return (
     <div className={`bg-dark`}>
-      <h2 className="text-center">Contact Details</h2>
+      <h2 className="text-center text-white">Contact Details</h2>
       <div className="rowx">
         <div className=" d-flex justify-content-center align-items-center py-4" style={{ gap: "3vh" }}>
           {
@@ -40,8 +40,6 @@ export default function Footer() {
                 <div style={{ background: "#5e6a76", borderRadius: "50%", }} className="d-flex justify-content-center align-items-center socialMedia">
                   <img src={data.logo} className="logofoo" />
                 </div>
-
-                {/* <p className="text-white">{data.name}</p> */}
               </div>
 
             })
@@ -50,8 +48,7 @@ export default function Footer() {
 
       </div>
       <div className="col-12 d-flex align-items-center justify-content-center">
-      <p className="text-white text-center textContainer">©Swetasmita Ranjan Sahoo 2023. All Rights Reserved.
-
+        <p className="text-white text-center textContainer">©Swetasmita Ranjan Sahoo 2023. All Rights Reserved.
 Feel free to customize this text by replacing "Swetasmita Ranjan Sahoo" with your own name or company name, and updating the 2023 to the current year.</p>
       </div>
       <style jsx>{`
@@ -64,7 +61,11 @@ Feel free to customize this text by replacing "Swetasmita Ranjan Sahoo" with you
         width:3rem;
         background:black;
         border-radius:50%;
-        box-shadow: 0px 3px 15px yellow;
+        box-shadow: 0px 5px 1px black;
+        cursor:pointer;
+      }
+      .socialMedia:hover{
+        transform: scale(1.1);
       }
       .textContainer{
         width:66.66%;
@@ -75,10 +76,14 @@ Feel free to customize this text by replacing "Swetasmita Ranjan Sahoo" with you
           width:2rem;
           background:black;
           border-radius:50%;
-          box-shadow: 0px 3px 15px yellow;
+          box-shadow: 0px 5px 1px black;
         }
         .textContainer{
           width:86.66%;
+        }
+        .logofoo{
+          height:2.5vh;
+          width:2.5vh;
         }
       }
       `}</style>

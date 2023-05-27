@@ -34,13 +34,23 @@ const Form = () => {
         <div className='d-flex flex-wrap flex-column justify-content-center align-items-center'>
           <div className='d-flex flex-wrap flex-column'>
             <form ref={form} onSubmit={sendEmail} className='d-flex flex-wrap flex-column'>
-              <label className='text-white fntSz14 m-0'>Name<span className='text-danger'>*</span></label>
-              <input type="text" name="user_name" placeholder='Enter Your Name' className='inputfield' />
-              <label className='text-white fntSz14 m-0'>Email<span className='text-danger'>*</span></label>
-              <input type="email" name="user_email" placeholder='Enter Your Email' className='inputfield' />
-              <label className='text-white fntSz14 m-0'>Please Tell Me About Yourself and Your Project<span className='text-danger'>*</span></label>
-              <textarea name="message" className='inputfield' placeholder='Enter Your Query' />
-              <input type="submit" value="Send" className='btn_follow' />
+              <div className="form__group mb-3">
+                <input type="text" name="user_name" placeholder='Enter Your Name*' className="form__field" />
+                <label for="name" className="form__label"> Enter Your Name * </label>
+              </div>
+              <div className="form__group mb-3">
+                <input type="email" name="user_email" placeholder='Enter Your Email' className="form__field" />
+                <label for="name" className="form__label"> Enter Your Email * </label>
+              </div>
+              <div className="form__group mb-3">
+                <textarea rows={4} name="message" placeholder='Message' className="form__field" />
+                <label for="name" className="form__label"> Message </label>
+              </div>
+              <div>
+                <button className="button2">
+                  Send 👍
+                </button>
+              </div>
             </form>
             <ToastContainer
               position="top-right"
@@ -60,18 +70,98 @@ const Form = () => {
 
         </div>
         <style jsx>{`
-        .inputfield{
-          background:black;
-          outline:none;
+        button {
+          position: relative;
+          font-size: 1.2em;
+          padding: 0.7em 1.4em;
+          background-color: #BF0426;
+          text-decoration: none;
+          border: none;
+          border-radius: 0.5em;
+          color: #DEDEDE;
+          box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+        }
+        
+        button::before {
+          position: absolute;
+          content: '';
+          height: 0;
+          width: 0;
+          top: 0;
+          left: 0;
+          background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+          border-radius: 0 0 0.5em 0;
+          box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+          transition: 0.3s;
+        }
+        
+        button:hover::before {
+          width: 1.6em;
+          height: 1.6em;
+        }
+        
+        button:active {
+          box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+          transform: translate(0.1em, 0.1em);
+        }
+        .form__group {
+          position: relative;
+        }
+        
+        .form__field {
+          border: 1px solid silver !important;
+          border-radius: 5px;
+          box-sizing: border-box;
+          color: #fff;
+          background-color: black;
+          height: 40px;
           width:30vw;
-          color:white;
-          border-radius:6px;
-          box-shadow:none;
-          margin-bottom:3vh;
-          border:none;
+          padding: 15px;
+        }
+        textarea{
+          height:90px !important;
+        }
+        .form__field::placeholder {
+          color: transparent;
+        }
+        
+        .form__field:placeholder-shown ~ .form__label {
+          top: 10px;
+          border-right: none;
+          border-left: none;
+        }
+        
+        .form__label {
+          background-color: none;
+          color: #9b9b9b;
+          display: block;
+          font-size: .9em;
+          margin-left: 10px;
+          padding: 0 10px;
+          pointer-events: none;
+          position: absolute;
+          top: -10px;
+          transition: 0.2s;
+        }
+        
+        .form__field:focus {
+          border: 2px solid gold !important;
+          background-color: black;
+          outline: none;
+        }
+        
+        .form__field:focus ~ .form__label {
+          background-color: black;
+          color: gold;
+          font-size: .9em;
+          margin-left: 10px;
+          padding: 0 10px;
+          position: absolute;
+          top: -10px;
+          transition: 0.2s;
         }
         @media only screen and (max-width: 767px) {
-          .inputfield{
+          .form__field{
             width:90vw;
           }
         }

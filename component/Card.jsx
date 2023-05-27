@@ -51,7 +51,8 @@ const Card = (props) => {
       gap:3rem;
      }
      .bulk__message__card:hover, .bulk__message__card:focus {
-      background-color: #e91e63;
+      background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
       color: #000;
     }
     .text-shadow{text-shadow: 5px 6px 8px black;}
