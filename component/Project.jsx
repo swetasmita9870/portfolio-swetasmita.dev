@@ -1,14 +1,21 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import { crud, forkify, netlify, Profile } from '../lib/config';
+import { connectify, crud, forkify, netlify, Profile } from '../lib/config';
 import ProjectTile from './customComponent/ProjectTile';
 
 const Project = () => {
   const router = useRouter();
   let projectData = [
     {
-      name:"Forkify Recipe",
-      image:forkify,
+      name: "Connectify",
+      image: connectify,
+      url: "https://connectify-gilt.vercel.app/",
+      git: "#",
+      desc: "I have created a chat app using Firebase and Next.js. The app allows users to send and delete messages while also providing a search feature to find other users. It leverages the real-time database capabilities of Firebase to ensure seamless and instant messaging. The Next.js framework provides a smooth and efficient user experience."
+    },
+    {
+      name: "Forkify Recipe",
+      image: forkify,
       url: "https://liku-swetasmita-food-order.netlify.app",
       git: "#",
       desc: "It utilizes the Forkify API to provide users with a platform to search for recipes, save their favorite recipes, and create shopping lists."

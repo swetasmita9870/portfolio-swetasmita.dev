@@ -16,8 +16,6 @@ const Form = () => {
   const serviceID = "service_6fdsauv";
   const templateID = "template_chl78bb";
   const sendEmail = (e) => {
-    e.preventDefault();
-
     emailjs.sendForm('service_6fdsauv', 'template_chl78bb', form.current, 'NpXRVt3xxy6dxQSIN')
       .then((result) => {
         console.log(result.text);
@@ -35,11 +33,11 @@ const Form = () => {
           <div className='d-flex flex-wrap flex-column'>
             <form ref={form} onSubmit={sendEmail} className='d-flex flex-wrap flex-column'>
               <div className="form__group mb-3">
-                <input type="text" name="user_name" placeholder='Enter Your Name*' className="form__field" />
+                <input type="text" onChange={(e) => setName(e.target.value)} name="user_name" placeholder='Enter Your Name*' className="form__field" />
                 <label for="name" className="form__label"> Enter Your Name * </label>
               </div>
               <div className="form__group mb-3">
-                <input type="email" name="user_email" placeholder='Enter Your Email' className="form__field" />
+                <input onChange={(e) => setEmail(e.target.value)} type="email" name="user_email" placeholder='Enter Your Email' className="form__field" />
                 <label for="name" className="form__label"> Enter Your Email * </label>
               </div>
               <div className="form__group mb-3">
@@ -47,7 +45,7 @@ const Form = () => {
                 <label for="name" className="form__label"> Message </label>
               </div>
               <div>
-                <button className="button2">
+                <button className="button2" disabled={!name && !email}>
                   Send 👍
                 </button>
               </div>
@@ -113,7 +111,7 @@ const Form = () => {
           border-radius: 5px;
           box-sizing: border-box;
           color: #fff;
-          background-color: black;
+          background-color: #212529;
           height: 40px;
           width:30vw;
           padding: 15px;
@@ -146,12 +144,12 @@ const Form = () => {
         
         .form__field:focus {
           border: 2px solid gold !important;
-          background-color: black;
+          background-color: #212529;
           outline: none;
         }
         
         .form__field:focus ~ .form__label {
-          background-color: black;
+          background-color: #212529;
           color: gold;
           font-size: .9em;
           margin-left: 10px;
