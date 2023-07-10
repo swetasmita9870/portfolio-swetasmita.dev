@@ -14,6 +14,13 @@ const Project = () => {
       desc: "I have created a chat app using Firebase and Next.js. The app allows users to send and delete messages while also providing a search feature to find other users. It leverages the real-time database capabilities of Firebase to ensure seamless and instant messaging. The Next.js framework provides a smooth and efficient user experience."
     },
     {
+      name: "Shoes Store",
+      image: connectify,
+      url: "https://shoes-store-chi.vercel.app/",
+      git: "#",
+      desc: "Discover our sleek shoe store built with Next.js, Tailwind, and Strapi. Browse our extensive collection of stylish footwear for all ages. With secure Stripe integration, enjoy seamless and protected transactions. Explore our user-friendly interface, detailed product descriptions, and exceptional customer service. Step into fashion-forward footwear effortlessly."
+    },
+    {
       name: "Forkify Recipe",
       image: forkify,
       url: "https://liku-swetasmita-food-order.netlify.app",
