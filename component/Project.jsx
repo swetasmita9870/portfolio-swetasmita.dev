@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import { connectify, crud, forkify, netlify, Profile } from '../lib/config';
+import { connectify, crud, forkify, netlify, Profile, ShoesStore } from '../lib/config';
 import ProjectTile from './customComponent/ProjectTile';
 
 const Project = () => {
@@ -15,7 +15,7 @@ const Project = () => {
     },
     {
       name: "Shoes Store",
-      image: connectify,
+      image: ShoesStore,
       url: "https://shoes-store-chi.vercel.app/",
       git: "#",
       desc: "Discover our sleek shoe store built with Next.js, Tailwind, and Strapi. Browse our extensive collection of stylish footwear for all ages. With secure Stripe integration, enjoy seamless and protected transactions. Explore our user-friendly interface, detailed product descriptions, and exceptional customer service. Step into fashion-forward footwear effortlessly."
