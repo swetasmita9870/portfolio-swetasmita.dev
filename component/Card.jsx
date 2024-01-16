@@ -45,7 +45,7 @@ const Card = (props) => {
       border-radius:22px;
       padding:1rem;
       width:25%;
-      height:30vh;
+      min-height:35vh;
      }
      .card_container{
       gap:3rem;

@@ -11,7 +11,7 @@ const ProjectTile = (props) => {
           <img src={data.image} width="100%" height="120px" style={{ objectFit: "fill", borderRadius: "20px 20px 0 0" }} />
         </div>
         <div className="card__descr-wrapper">
-          <p className="card__title text-capitalize">
+          <p className="card__title text-base text-capitalize">
             {data.name}
           </p>
           <Shoemore
@@ -33,7 +33,7 @@ const ProjectTile = (props) => {
           width: 20rem;
           height: 100%;
           border-radius: 20px;
-          background: #fff;
+          background: var( --l_section_bg);
           box-shadow: -0px 9px 8px #00f0,
                       5px -3px 8px #000;
           display: flex;
@@ -64,15 +64,10 @@ const ProjectTile = (props) => {
         }
         
         .card__title {
-          color: #000;
           text-align: center;
           margin-bottom: 15px;
           font-weight: 900;
           font-size: 16px;
-        }
-        
-        .card__descr {
-          color: #000;
         }
         
         .svg {

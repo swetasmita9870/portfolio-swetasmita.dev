@@ -2,30 +2,40 @@
 import { useRouter } from 'next/router'
 import React from 'react'
 import { useIsMobileView } from '../hook/mobileview';
-import { Logo } from '../lib/config';
-
+import { Profile } from '../lib/config';
+import Image from 'next/image';
+import Link from 'next/link';
+import avartarAnimation from '../public/Lottie/avatar.json'
+import LottieAnumation from './LottieAnumation';
 const DvHeader = () => {
   const router = useRouter();
   const isMobile = useIsMobileView();
+  const menuList = [
+    { title: 'Home', link: '/' },
+    { title: 'Blog', link: '/blog' },
+    { title: 'Resume', link: '/resume' },
+    { title: 'Gallery', link: '/gallery' },
+    { title: 'Reels', link: '/reel' },
+    { title: 'Contact', link: '/contact' },
+  ]
   return (
-    <div className='col-12 d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "#000" }}>
-      <div className='col-6 d-flex align-items-center'style={{marginLeft:"2rem"}}>
-        {/* <img
-          src={Logo}
-          height={100}
-          width={300}
-          className='ml-5'
-          style={{ objectFit: "contain" }}
-          alt="logo"
-        /> */}
-        <h1 className='primary-text'>PortFolio</h1>
+    <div className='col-12 sticky-top d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "var( --l_profileCard_bgColor)" }}>
+      <div className='col-4 d-flex align-items-center'>
+        <h1 className='primary-text'>SwetsSmita</h1>
       </div>
-      {!isMobile && <div className='d-flex justify-content-between float-right m-auto'>
-        <li className='text-white  list_none'>Home</li>
-        <li className='text-white list_none' onClick={() => router.push('/blog')} >Blog</li>
-        <li className='text-white list_none'>Resume</li>
-        <li className='text-white list_none'>Contact</li>
+      {!isMobile && <div className='col-8 d-flex flex-row align-items-center justify-content-between'>
+        <div className='col-6 d-flex justify-content-between align-items-center'>
+          {menuList.map((data, i) => {
+            return (
+              <Link prefetch={true} href={data.link} key={i} className={`${router.pathname === data.link ? "text-base" : "text-app"}  text-decoration-none cursorPtr font-weight-500 list_none`} >{data.title}</Link>
+            )
+          })}
+        </div>
+        <div className='col-6 px-4 d-flex justify-content-end align-items-end'>
+          <LottieAnumation width={80} height={80} animationName={avartarAnimation} />
+        </div>
       </div>}
+
       <style jsx>{`
       .list_none{
         list-style-type:none;
@@ -33,7 +43,7 @@ const DvHeader = () => {
       }
       .list_none:hover{
         text-shadow: 5px 6px 8px black;
-        color:yellow !important;
+        color:var(--l_base) !important;
       }
       @keyframes shine {
         0% {

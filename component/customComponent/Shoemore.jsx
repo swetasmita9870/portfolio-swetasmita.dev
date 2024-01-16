@@ -11,7 +11,7 @@ const Shoemore = (props) => {
 
   return (
     <div className={`card__div ${isExpanded ? 'show-full' : ''}`}>
-      <p className="card__descr">
+      <p className="card__descr text-app">
         {isExpanded ? description : description.slice(0, maxLength)}
       </p>
       {description.length > maxLength && (

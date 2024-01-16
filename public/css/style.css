@@ -123,9 +123,11 @@ a {
   width: 100%;
   background: var(--l_app_bg);
 }
-.primary-text{
-  color: yellow;
+
+.text-base {
+  color: var(--l_base);
 }
+
 .sticky {
   position: sticky;
   z-index: 101;
@@ -1893,6 +1895,10 @@ select.round {
   width: 91px;
   text-transform: capitalize;
   font-size: 12px;
+}
+
+#nprogress .spinner {
+  display: none !important;
 }
 
 .liteGreyClr {
