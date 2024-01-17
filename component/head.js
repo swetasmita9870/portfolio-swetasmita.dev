@@ -2,7 +2,7 @@ import React from "react";
 import NextHead from "next/head";
 import { Logo, Profile } from "../lib/config";
 
-const defaultTitle = "SWETASMITA RANJAN SAHOO";
+const defaultTitle = "SWETASMITA RANJAN SAHOO-Frontend Developer";
 const defaultOGTitle = "SWETASMITA RANJAN SAHOO";
 const defaultDescription = "Welcome to my portfolio, where I showcase my professional and personal achievements. As you explore my work, you'll find a diverse range of projects, from web development and design to writing and marketing. With a keen eye for detail and a passion for delivering quality work, I take pride in everything I create. Whether you're a potential client or just curious about my skills and experience, I invite you to take a look and see what I have to offer. Thank you for visiting!";
 const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app/";
@@ -24,7 +24,25 @@ const CustomHead = (props) => {
       <link rel="canonical" href={defaultOGURL} />
       <meta property="fb:app_id" content={"1344493016062063"} />
       <link href={Profile} rel="icon" />
-
+      <script type="application/ld+json">
+        {{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Swetasmita Ranjan Sahoo",
+          "url": "https://portfolio-swetasmita-dev.vercel.app/",
+          "image": Profile,
+          "jobTitle": "Frontend Developer",
+          "sameAs": [
+            "https://www.linkedin.com/in/swetasmita-ranjan-sahoo-55811a173/",
+            "https://github.com/swetasmita9870",
+            "LinkToYourTwitterProfile"
+          ],
+          "alumniOf": {
+            "@type": "Siksha 'O' Anusanshan UNiversity",
+            "name": "MCA"
+          }
+        }}
+      </script>
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
