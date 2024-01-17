@@ -1,6 +1,7 @@
 import React from "react";
 import NextHead from "next/head";
 import { Logo, Profile } from "../lib/config";
+import Script from "next/script";
 
 const defaultTitle = "SWETASMITA RANJAN SAHOO-Frontend Developer";
 const defaultOGTitle = "SWETASMITA RANJAN SAHOO";
@@ -24,7 +25,7 @@ const CustomHead = (props) => {
       <link rel="canonical" href={defaultOGURL} />
       <meta property="fb:app_id" content={"1344493016062063"} />
       <link href={Profile} rel="icon" />
-      <script type="application/ld+json">
+      <Script type="application/ld+json">
         {{
           "@context": "https://schema.org",
           "@type": "Person",
@@ -42,7 +43,7 @@ const CustomHead = (props) => {
             "name": "MCA"
           }
         }}
-      </script>
+      </Script>
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
