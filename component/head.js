@@ -25,8 +25,8 @@ const CustomHead = (props) => {
       <link rel="canonical" href={defaultOGURL} />
       <meta property="fb:app_id" content={"1344493016062063"} />
       <link href={Profile} rel="icon" />
-      <Script type="application/ld+json">
-        {{
+      <Script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Swetasmita Ranjan Sahoo",
@@ -42,8 +42,9 @@ const CustomHead = (props) => {
             "@type": "Siksha 'O' Anusanshan UNiversity",
             "name": "MCA"
           }
-        }}
-      </Script>
+        })
+      }}
+      />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
