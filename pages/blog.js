@@ -25,7 +25,7 @@ const Blog = () => {
       "subpoint3": "Technology Integration Showcase:",
       "desc3": "Highlight the seamless integration of HTML, CSS, JavaScript, React, Redux, and Next.js. Each technology plays a crucial role in the project's success, with practical insights into their utilization and synergy.",
       "animation": animationJson,
-      "size": 400
+      "size": 300
     },
     {
       "id": "Responsive",
@@ -37,7 +37,7 @@ const Blog = () => {
       "subpoint3": "Mobile-First Approach:",
       "desc3": "Embrace the mobile-first design philosophy. Understand the benefits of starting with a mobile-centric approach and gradually enhancing the user interface for larger screens, optimizing performance and user experience.",
       "animation": responsive,
-      "size": 400
+      "size": 300
     },
     {
       "id": "JavaScript",
@@ -49,7 +49,7 @@ const Blog = () => {
       "subpoint3": "Error Handling Strategies: ",
       "desc3": "Learn how to implement robust error-handling mechanisms. From try-catch blocks to utilizing custom error objects, understand how to gracefully handle errors and improve the overall stability of your frontend applications.",
       "animation": javascript,
-      "size": 400
+      "size": 300
     },
     {
       "id": "Tailwind",
@@ -61,7 +61,7 @@ const Blog = () => {
       "subpoint3": "Real-world Styling Scenarios:",
       "desc3": "Apply Tailwind CSS to real-world styling scenarios. From card components to navigation bars, witness the versatility of Tailwind in action as it simplifies complex styling challenges.",
       "animation": tailwind,
-      "size": 400
+      "size": 300
     },
     {
       "id": "React",
@@ -73,7 +73,7 @@ const Blog = () => {
       "subpoint3": "Performance Optimization Techniques:",
       "desc3": "Uncover strategies for optimizing the performance of your React applications. From code splitting to lazy loading, implement techniques that enhance the user experience by reducing load times and resource consumption.",
       "animation": react,
-      "size": 400
+      "size": 300
     },
     {
       "id": "NextJs",
@@ -85,7 +85,7 @@ const Blog = () => {
       "subpoint3": "Optimizing Development Workflows:",
       "desc3": "Explore how Next.js optimizes development workflows. From automatic code splitting to serverless deployments, witness how Next.js simplifies the development process, allowing for faster iterations and efficient collaboration.",
       "animation": nextJs,
-      "size": 400
+      "size": 300
     },
     {
       "id": "BootstrapTailwind",
@@ -97,7 +97,7 @@ const Blog = () => {
       "subpoint3": "Pros and Cons Analysis:",
       "desc3": "Perform a detailed analysis of the pros and cons of using Bootstrap and Tailwind CSS. Consider factors such as ease of use, flexibility, and community support to determine which framework aligns better with your development workflow.",
       "animation": Bootstrap,
-      "size": 400
+      "size": 300
     },
     {
       "id": "PersonalBrand",
@@ -109,7 +109,7 @@ const Blog = () => {
       "subpoint3": "Contributing to the Community:",
       "desc3": "Discuss the significance of contributing to the frontend development community. Whether it's through open-source contributions, blog posts, or mentoring, active participation can help you establish credibility and expand your network.",
       "animation": frontend,
-      "size": 400
+      "size": 300
     },
     {
       "id": "ReactAnimation",
@@ -121,7 +121,7 @@ const Blog = () => {
       "subpoint3": "Optimizing Performance:",
       "desc3": "Discuss strategies for optimizing the performance of animations in React. Address common challenges such as jank and layout thrashing, and provide tips on achieving buttery-smooth animations without compromising performance.",
       "animation": animationJson,
-      "size": 400
+      "size": 300
     },
     {
       "id": "ReduxOptimization",
@@ -133,7 +133,7 @@ const Blog = () => {
       "subpoint3": "Efficient State Management:",
       "desc3": "Provide insights into efficient state management practices with Redux. Discuss concepts like state immutability, reselect for memoized selectors, and middleware optimization to maintain a scalable and maintainable codebase.",
       "animation": storage,
-      "size": 400
+      "size": 300
     },
     {
       "id": "WebAccessibility",
@@ -145,7 +145,7 @@ const Blog = () => {
       "subpoint3": "Testing for Accessibility:",
       "desc3": "Highlight the significance of incorporating accessibility testing into the development workflow. Discuss tools and methodologies for testing web applications, and stress the role of developers in fostering a culture of accessibility.",
       "animation": web,
-      "size": 400
+      "size": 300
     },
     {
       "id": "CodingChallenges",
@@ -157,7 +157,7 @@ const Blog = () => {
       "subpoint3": "Community Engagement and Collaboration:",
       "desc3": "Encourage community engagement through coding challenges. Share experiences of collaborating with other developers, hosting coding challenges, and participating in code reviews to foster a culture of continuous learning and improvement.",
       "animation": codeing,
-      "size": 400
+      "size": 300
     }
 
   ]
