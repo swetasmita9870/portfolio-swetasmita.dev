@@ -7,8 +7,12 @@ const resume = () => {
     <div>
       <DvHeader />
       <div className='vh-100'>
-        <object width="100%" height="100%" data={Resume} type="application/pdf">   </object>
-      </div>
+        <embed
+          src={Resume}
+          type="application/pdf"
+          width="100%"
+          height="100%"
+        />     </div>
     </div>
   )
 }
