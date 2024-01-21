@@ -166,7 +166,7 @@ const Blog = () => {
     <>
       <DvHeader />
       <div className='col-12 d-flex flex-wrap justify-content-around'>
-        <div className='col-9 d-flex flex-wrap justify-content-around'>
+        <div className='col-12 col-md-9 col-lg-9 d-flex flex-wrap justify-content-around'>
           {blogData.map((data, i) => {
             return (
               <>
