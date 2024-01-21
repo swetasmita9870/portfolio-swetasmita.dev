@@ -34,7 +34,7 @@ const DvHeader = () => {
     { title: 'Blog', link: '/blog' },
     { title: 'Project', link: '/project' },
     { title: 'Gallery', link: '/gallery' },
-    { title: 'Reels', link: '/reel' },
+    { title: 'Reels', link: '/reels' },
     { title: 'Contact', link: '/contact' },
   ];
 
