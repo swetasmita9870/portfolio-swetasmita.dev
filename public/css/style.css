@@ -5845,7 +5845,9 @@ input[type="number"] {
 .border1pxSolid {
   border: 1px solid var(--l_base);
 }
-
+.borderBase {
+  border: 2px solid var(--l_base);
+}
 .bgImge {
   background-repeat: no-repeat;
   background-attachment: fixed;

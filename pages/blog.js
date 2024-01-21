@@ -12,6 +12,7 @@ import storage from '../public/Lottie/storage.json'
 import codeing from '../public/Lottie/coading.json'
 import web from '../public/Lottie/web.json'
 import LottieAnumation from '../component/LottieAnumation';
+import DvFooter from '../component/Footer';
 
 const Blog = () => {
   const blogData = [
@@ -170,14 +171,12 @@ const Blog = () => {
             return (
               <>
                 <div key={i} className='blogtile col-12 radius10 my-3 p-3 d-flex align-items-center justify-content-center' style={{ background: "var( --l_section_bg)" }}>
-                  {i % 2 === 0 && <div className='col-6'> <LottieAnumation width={data.size} height={data.size} animationName={data.animation} /></div>}
                   <div>
                 <p className='fntSz25 font-wight-500  '>{data.heading}</p>
                 <p className='fntSz15'><span className='fntSz18'>{data.subpoint1}</span> {data.desc1}</p>
                 <p className='fntS15'><span className='fntSz18'>{data.subpoint2}</span> {data.desc2}</p>
                 <p className='fntSz15'><span className='fntSz18'>{data.subpoint3}</span> {data.desc3}</p>
-              </div>
-                  {i % 2 !== 0 && <div className='col-6'><LottieAnumation width={data.size} height={data.size} animationName={data.animation} /></div>}
+                  </div>
                 </div>
               </>
             )
@@ -189,6 +188,7 @@ const Blog = () => {
         }
         `}</style>
       </div>
+      <DvFooter />
     </>
   )
 }

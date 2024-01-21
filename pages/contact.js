@@ -3,6 +3,7 @@ import DvHeader from '../component/DvHeader'
 import { FaceBook, GitHubLogo, Gmail1, Home, Instagram1, LinkedIn, Phone, Whatsapp3d } from '../lib/config'
 import ContactUsAnimation from '../public/Lottie/contactUs.json'
 import Lottie from 'react-lottie';
+import DvFooter from '../component/Footer';
 const contact = () => {
   const contactList = [
     { title: "Chat", icon: Whatsapp3d, link: "https://wa.me/+919337127197", description: "Dm Me !!" },
@@ -28,11 +29,11 @@ const contact = () => {
       <div>
         <Lottie options={defaultOptions} height={300} width={300} />
       </div>
-      <div className='d-flex w-100 justify-content-center flex-wrap'>
+      <div className='d-flex col-12justify-content-center flex-wrap'>
         {contactList.map((data) => {
           return (
-            <div className='col-4 d-flex align-items-center flex-column text-center'>
-              <a href={data.link} target='_blank' className='col-4 d-flex align-items-center flex-column text-center text-decoration-none text-app'>
+            <div className='col-6 col-md-4 d-flex align-items-center flex-column text-center'>
+              <a href={data.link} target='_blank' className='px-3 d-flex align-items-center flex-column text-center text-decoration-none text-app'>
                 <p className='fntSz23 bold mb-0'>{data.title}</p>
                 <div className='d-flex align-items-center justify-content-center' style={{ width: "60px", height: "60px", borderRadius: "50%", background: "var(--l_base)" }}>
                   <img src={data.icon} width={40} height={40} />
@@ -43,8 +44,7 @@ const contact = () => {
           )
         })}
       </div>
-      <style jsx>{`
-      `}</style>
+      <DvFooter />
     </div>
   )
 }

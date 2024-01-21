@@ -3,7 +3,7 @@ import React from 'react'
 import { connectify, crud, forkify, netlify, Profile, ShoesStore } from '../lib/config';
 import ProjectTile from './customComponent/ProjectTile';
 
-const Project = () => {
+const Project = (props) => {
   const router = useRouter();
   let projectData = [
     {
@@ -45,8 +45,8 @@ const Project = () => {
   return (
     <>
       <div className='bg-dark'>
-        <h2 className='text-center py-5 text-white'>My Projects</h2>
-        <div className='skillstab'>
+        {!props.fromPage ? <h2 className='text-center py-5 text-white'>My Projects</h2> : null}
+        <div className={`skillstab ${props.fromPage ? "px-5 pt-4" : ""}`}>
           {projectData.map((data,index)=>{
             return (<ProjectTile
               key={index}
