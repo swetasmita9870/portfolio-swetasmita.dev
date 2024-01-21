@@ -28,6 +28,7 @@ const Gallery = () => {
               src={data.url}
               alt={`Image ${index + 1}`}
               className='gallery-image'
+              style={{ objectFit: "contain" }}
             />
           </div>
         ))}
@@ -42,57 +43,58 @@ const Gallery = () => {
           />
         )}
         <style jsx>{`
+  .gallery-item {
+    height: 200px;
+    width: 150px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 16px;
+  }
 
-        .gallery-item {
-          height:200px;
-          width:200px;
-          cursor: pointer;
-          position: relative;
-          overflow: hidden;
-          border-radius: 8px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease-in-out;
-        }
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
 
-        .gallery-item:hover {
-          transform: scale(1.05);
-        }
+  .gallery-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 
-        .gallery-image {
-          display: block;
-          width: 100%;
-          height: auto;
-          border-radius: 8px;
-        }
+  @media (min-width: 576px) {
+    .gallery-item {
+      flex-basis: calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+  }
 
-        @media (min-width: 576px) {
-          .gallery-item {
-            flex-basis: calc(50% - 16px);
-            max-width: calc(50% - 16px);
-          }
-        }
+  @media (min-width: 768px) {
+    .gallery-item {
+      flex-basis: calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+  }
 
-        @media (min-width: 768px) {
-          .gallery-item {
-            flex-basis: calc(33.3333% - 16px);
-            max-width: calc(33.3333% - 16px);
-          }
-        }
+  @media (min-width: 992px) {
+    .gallery-item {
+      flex-basis: calc(25% - 16px);
+      max-width: calc(25% - 16px);
+    }
+  }
 
-        @media (min-width: 992px) {
-          .gallery-item {
-            flex-basis: calc(25% - 16px);
-            max-width: calc(25% - 16px);
-          }
-        }
+  @media (min-width: 1200px) {
+    .gallery-item {
+      flex-basis: calc(25% - 16px);
+      max-width: calc(25% - 16px);
+    }
+  }
+`}</style>
 
-        @media (min-width: 1200px) {
-          .gallery-item {
-            flex-basis: calc(20% - 16px);
-            max-width: calc(20% - 16px);
-          }
-        }
-      `}</style>
 
       </div>
       <DvFooter />
