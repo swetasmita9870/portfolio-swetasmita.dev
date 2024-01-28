@@ -136,7 +136,7 @@ const ReelsPlayer = React.forwardRef((props, ref) => {
             position: 'absolute',
             zIndex: 3,
             left: 0,
-            height: '3px',
+            height: '1px',
             bottom: mobileView ? '2%' : '0%',
             top: '0%',
             width: `${progress}%`,
@@ -145,8 +145,8 @@ const ReelsPlayer = React.forwardRef((props, ref) => {
         {router.query.slug === playerId ? <img
           src={`${(!globalMuted ? unmute : mute)}`}
           className="cursorPtr"
-          width={mobileView ? 32 : 50}
-          height={mobileView ? 32 : 50}
+          width={30}
+          height={30}
           style={{
             position: 'absolute',
             zIndex: 3,
@@ -230,12 +230,12 @@ const ReelsPlayer = React.forwardRef((props, ref) => {
           width:100%;
           object-position: center;
           height:auto !important;
-          max-height:${mobileView ? 'calc(calc(var(--vhCustom, 1vh) * 100) - 73.5px)' : 'calc(var(--vhCustom, 1vh) * 95)'} !important;
+          height:${mobileView ? 'calc(var(--vhCustom, 1vh) * 100)' : 'calc(var(--vhCustom, 1vh) * 88)'} !important;
           transform: translateY(-50% );
           top: 50% !important;
         }
         :global(.dynamicHeightVideo){
-          height:${mobileView ? 'calc(calc(var(--vhCustom, 1vh) * 100) - 73.5px)' : 'calc(var(--vhCustom, 1vh) * 95)'} !important;
+          height:${mobileView ? 'calc(var(--vhCustom, 1vh) * 100)' : 'calc(var(--vhCustom, 1vh) * 88)'} !important;
         }
         :global(.reels-container) {
           width: ${mobileView ? '100vw' : '335px'};

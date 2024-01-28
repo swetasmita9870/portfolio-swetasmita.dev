@@ -16,11 +16,11 @@ const Card = (props) => {
     //   hello world
     // </div>
     <>
-      {/* <div className='bg-dark'> */}
+      {/* <div className='card_bg'> */}
       {/* <h2 className='m-0 text-center text-white'>Live Timer</h2> */}
       {/* <h1 className='m-0 text-center headingName py-5'>{`${date.toLocaleTimeString()}`}</h1> */}
       {/* </div> */}
-      <div className='bg-dark d-flex flex-column justify-content-center align-items-center'>
+      <div className='card_bg d-flex flex-column justify-content-center align-items-center'>
         <h2 style={{ fontFamily: "sans-serif" }} className='bg_dark text-center primary-text pb-5'>About Me!</h2>
         <div className='d-flex align-items-center col-12 justify-content-center flex-wrap card_container'>
           <div className='bulk__message__card'>

@@ -3,9 +3,9 @@ import { Profile } from '../lib/config'
 
 const Dvhomecomp1 = () => {
   return (
-    <div className='w-100 bg-dark'>
-      <div className='d-flex flex-wrap justify-content-center'>
-        <div className='bg-dark d-flex justify-content-center align-items-center' >
+    <div className='w-100 card_bg'>
+      <div className='d-flex flex-wrap justify-content-center col-12 px-0'>
+        <div className='col-12 col-md-6 px-0 card_bg d-flex justify-content-center align-items-center' >
         <div className=' flex-column container'>
           <h1 className='text-shadow'>Hello 👋 I'm</h1>
           <section className="animation">
@@ -16,7 +16,7 @@ const Dvhomecomp1 = () => {
         </div>
       </div>
 
-        <div className='bg-dark d-flex justify-content-center align-items-center position-relative'>
+        <div className='col-12 col-md-6 px-0 card_bg d-flex justify-content-center align-items-center position-relative'>
         <img className='home-img-inner' width={"50%"} src={Profile} />
       </div>
       </div>

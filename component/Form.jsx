@@ -27,8 +27,8 @@ const Form = () => {
 
   return (
     <>
-      <h2 className='bg-dark text-white text-center m-0 py-5'>Lets Talk</h2>
-      <div className='bg-dark pb-5'>
+      <h2 className='card_bg text-white text-center m-0 py-5'>Lets Talk</h2>
+      <div className='card_bg pb-5'>
         <div className='d-flex flex-wrap flex-column justify-content-center align-items-center'>
           <div className='d-flex flex-wrap flex-column'>
             <form ref={form} onSubmit={sendEmail} className='d-flex flex-wrap flex-column'>

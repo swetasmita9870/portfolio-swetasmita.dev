@@ -58,10 +58,6 @@ const DvFooter = () => {
               </a>
             ))}
           </div>
-          <div className='d-flex mt-3 justify-content-center justify-content-md-start'>
-            <LottieAnumation width={30} height={30} animationName={callingAnimation} />
-            <p className='mb-0 mx-2 bold text-success mt-1'>+91-9337127197</p>
-          </div>
         </div>
         <div className="footer-section">
           <h2>Quick Links</h2>
@@ -77,7 +73,10 @@ const DvFooter = () => {
           <h2>Contact me</h2>
           <p>Chandigarh, India</p>
           <p>swetasmita987@gmail.com</p>
-          <p>+91-9337127197</p>
+          <div className='d-flex mt-3 justify-content-center justify-content-md-start'>
+            <LottieAnumation width={30} height={30} animationName={callingAnimation} />
+            <p className='mb-0 mx-2 bold text-success mt-1'>+91-9337127197</p>
+          </div>
         </div>
         <div className="footer-section">
           <h2>©Swetasmita</h2>

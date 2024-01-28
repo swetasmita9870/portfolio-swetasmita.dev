@@ -5637,13 +5637,8 @@ input[type="number"] {
 
 .cover-pill {
   background-color: var(--l_base_less_opacity);
-  position: absolute;
-  font-size: 0.8rem;
-  left: 3px !important;
-  top: 3px !important;
-  padding: 4px 10px;
-  border-radius: 200px;
   color: #fff;
+  box-shadow: 0 0 1px 2px var(--l_base);
 }
 
 .preview-pill {

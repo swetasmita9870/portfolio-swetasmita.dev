@@ -41,7 +41,6 @@ const DvHeader = () => {
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
-
   return (
     <div className='col-12 sticky-top d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "var( --l_profileCard_bgColor)" }}>
       <div className='col-12 col-md-4 d-flex justify-content-between align-items-center'>

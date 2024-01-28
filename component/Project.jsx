@@ -44,7 +44,7 @@ const Project = (props) => {
   ]
   return (
     <>
-      <div className='bg-dark'>
+      <div className='card_bg'>
         {!props.fromPage ? <h2 className='text-center py-5 text-white'>My Projects</h2> : null}
         <div className={`skillstab ${props.fromPage ? "px-5 pt-4" : ""}`}>
           {projectData.map((data,index)=>{

@@ -4,6 +4,7 @@ import { FaceBook, GitHubLogo, Gmail1, Home, Instagram1, LinkedIn, Phone, Whatsa
 import ContactUsAnimation from '../public/Lottie/contactUs.json'
 import Lottie from 'react-lottie';
 import DvFooter from '../component/Footer';
+import Form from '../component/Form';
 const contact = () => {
   const contactList = [
     { title: "Chat", icon: Whatsapp3d, link: "https://wa.me/+919337127197", description: "Dm Me !!" },
@@ -44,6 +45,7 @@ const contact = () => {
           )
         })}
       </div>
+      <Form />
       <DvFooter />
     </div>
   )

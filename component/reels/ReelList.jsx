@@ -112,11 +112,11 @@ const ReelsList = (props) => {
         display:none !important;
       }
       :global(.dynamicHeightReels){
-        height:calc(var(--vhCustom, 1vh) * 90) !important;
+        height:${mobileView ? 'calc(var(--vhCustom, 1vh) * 100)' : 'calc(var(--vhCustom, 1vh) * 88)'} !important;
         overflow: ${mobileView && 'hidden !important'};
       }
       :global(.swiper-wrapper){
-        height:calc(var(--vhCustom, 1vh) * 90) !important;
+        height:${mobileView ? 'calc(var(--vhCustom, 1vh) * 100)' : 'calc(var(--vhCustom, 1vh) * 88)'} !important;
       }
       :
       `}</style>
