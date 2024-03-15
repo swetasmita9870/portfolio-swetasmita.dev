@@ -44,7 +44,7 @@ const DvHeader = () => {
   return (
     <div className='col-12 sticky-top d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "var( --l_profileCard_bgColor)" }}>
       <div className='col-12 col-md-4 d-flex justify-content-between align-items-center'>
-        <h1 className='text-base'>SwetsSmita</h1>
+        <h1 className='text-base'>SwetaSmita</h1>
         {/* Add your mobile menu icon here */}
         <div className='d-flex d-md-none justify-content-end align-items-end'>
           <div className={`mobile-menu-icon d-md-none ${isDrawerOpen ? 'open' : ''}`} onClick={toggleDrawer}>
