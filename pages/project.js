@@ -1,8 +1,8 @@
 import React from 'react'
-import DvHeader from '../component/DvHeader'
-import Project from '../component/Project'
-import DvFooter from '../component/Footer'
-
+import dynamic from 'next/dynamic';
+const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
+const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
+const Project = dynamic(() => import('../component/Project'), { ssr: false });
 const project
   = () => {
     return (

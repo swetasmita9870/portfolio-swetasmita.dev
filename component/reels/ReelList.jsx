@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import SwiperCore, { Virtual } from "swiper";
-
 import { useRouter } from 'next/router';
 import { MuteProvider } from './MuteContext';
 import { allReelsData } from '../../lib/reel';

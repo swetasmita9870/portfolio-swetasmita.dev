@@ -8,7 +8,7 @@ const ProjectTile = (props) => {
     <>
       <div className="card__Div">
         <div >
-          <img src={data.image} width="100%" height="120px" style={{ objectFit: "fill", borderRadius: "20px 20px 0 0" }} />
+          <img src={data.image} width="100%" height="120px" style={{ objectFit: "fill", borderRadius: "20px 20px 0 0" }} alt="Swetasmita Ranjan Sahoo" />
         </div>
         <div className="card__descr-wrapper">
           <p className="card__title text-base text-capitalize">
@@ -19,11 +19,11 @@ const ProjectTile = (props) => {
           />
           <div className="card__links">
             <div className='d-flex align-items-center'>
-              <img src={Preview} className='image_div' />
+              <img src={Preview} className='image_div' alt="Swetasmita Ranjan Sahoo" />
               <a className="link" href={data.url}>Preview</a>
             </div>
             <div>
-              <img src={GitLogo} className='image_div' />
+              <img src={GitLogo} className='image_div' alt="Swetasmita Ranjan Sahoo" />
               <a className="link" href={data.git}>Code</a>
             </div>
           </div>

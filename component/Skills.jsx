@@ -1,6 +1,5 @@
 import React from 'react'
 import { Bootstarp, Css, GitHub, Html, Javascript, materialui, nextJs, react, redux } from '../lib/config'
-import Icon from './icon'
 
 const Skills = () => {
   let skillsData = [{

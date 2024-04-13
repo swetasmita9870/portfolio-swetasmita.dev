@@ -1,10 +1,11 @@
 import React from 'react'
-import DvHeader from '../component/DvHeader'
 import { FaceBook, GitHubLogo, Gmail1, Home, Instagram1, LinkedIn, Phone, Whatsapp3d } from '../lib/config'
 import ContactUsAnimation from '../public/Lottie/contactUs.json'
 import Lottie from 'react-lottie';
-import DvFooter from '../component/Footer';
 import Form from '../component/Form';
+import dynamic from 'next/dynamic';
+const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
+const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
 const contact = () => {
   const contactList = [
     { title: "Chat", icon: Whatsapp3d, link: "https://wa.me/+919337127197", description: "Dm Me !!" },
@@ -37,7 +38,7 @@ const contact = () => {
               <a href={data.link} target='_blank' className='px-3 d-flex align-items-center flex-column text-center text-decoration-none text-app'>
                 <p className='fntSz23 bold mb-0'>{data.title}</p>
                 <div className='d-flex align-items-center justify-content-center' style={{ width: "60px", height: "60px", borderRadius: "50%", background: "var(--l_base)" }}>
-                  <img src={data.icon} width={40} height={40} />
+                  <img src={data.icon} width={40} height={40} alt="Swetasmita Ranjan Sahoo" />
                 </div>
                 <p className='fntSz17' style={{ wordBreak: "break-all" }}>{data.description}</p>
               </a>

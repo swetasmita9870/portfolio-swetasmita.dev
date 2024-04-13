@@ -1,11 +1,11 @@
-import React from 'react'
-import Card from './Card'
-import Dvhomecomp1 from './dvhomecomp1'
-import Form from './Form'
-import Project from './Project'
-import Skills from './Skills'
-import Footer from './Footer'
 
+import dynamic from 'next/dynamic'
+const Card = dynamic(() => import('./Card'), { ssr: false });
+const Dvhomecomp1 = dynamic(() => import('./dvhomecomp1'), { ssr: false });
+const Form = dynamic(() => import('./Form'), { ssr: false });
+const Project = dynamic(() => import('./Project'), { ssr: false });
+const Skills = dynamic(() => import('./Skills'), { ssr: false });
+const Footer = dynamic(() => import('./Footer'), { ssr: false });
 const DvHome = () => {
   return (
     <>

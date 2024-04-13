@@ -1,10 +1,8 @@
-import { useRouter } from 'next/router'
 import React from 'react'
-import { connectify, crud, forkify, netlify, Profile, ShoesStore } from '../lib/config';
+import { connectify, crud, forkify, netlify, ShoesStore } from '../lib/config';
 import ProjectTile from './customComponent/ProjectTile';
 
 const Project = (props) => {
-  const router = useRouter();
   let projectData = [
     {
       name: "Connectify",

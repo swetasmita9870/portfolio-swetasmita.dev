@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaceBook, GitHub, GitHubLogo, Gmail1, Instagram, LinkedIn, Whatsapp3d, Youtube } from '../lib/config';
+import { FaceBook, GitHubLogo, Gmail1, Instagram, LinkedIn, Whatsapp3d, Youtube } from '../lib/config';
 import Link from 'next/link';
 import LottieAnumation from './LottieAnumation';
 import callingAnimation from '../public/Lottie/calling.json';

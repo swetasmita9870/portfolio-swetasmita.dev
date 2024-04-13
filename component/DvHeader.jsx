@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useIsMobileView } from '../hook/mobileview';
 import LottieAnumation from './LottieAnumation';
 import avartarAnimation from '../public/Lottie/avatar.json';
 
@@ -26,7 +25,6 @@ const MobileNavDrawer = ({ menuList, onClose }) => {
 
 const DvHeader = () => {
   const router = useRouter();
-  const isMobile = useIsMobileView();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const menuList = [
@@ -45,7 +43,6 @@ const DvHeader = () => {
     <div className='col-12 sticky-top d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "var( --l_profileCard_bgColor)" }}>
       <div className='col-12 col-md-4 d-flex justify-content-between align-items-center'>
         <h1 className='text-base'>SwetaSmita</h1>
-        {/* Add your mobile menu icon here */}
         <div className='d-flex d-md-none justify-content-end align-items-end'>
           <div className={`mobile-menu-icon d-md-none ${isDrawerOpen ? 'open' : ''}`} onClick={toggleDrawer}>
             <LottieAnumation width={80} height={80} animationName={avartarAnimation} />
@@ -75,30 +72,6 @@ const DvHeader = () => {
         .list_none:hover{
           text-shadow: 5px 6px 8px black;
           color:var(--l_base) !important;
-        }
-        @keyframes shine {
-          0% {
-            background-position-x: -500%;
-          }
-          100% {
-            background-position-x: 500%;
-          }
-        }
-        .headingName {
-          font-weight: 700;
-          text-align: center;
-          font-size: ${isMobile ? "18px" : "40px"};
-          font-family: Hack, sans-serif;
-          text-transform: uppercase;
-          background: linear-gradient(90deg, #000, #fff, #000);
-          letter-spacing: 5px;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-repeat: no-repeat;
-          background-size: 80%;
-          animation: shine 3.5s linear infinite;
-          position: relative;
         }
         /* Add the mobile navigation drawer styles here */
         :global(.mobile-nav-drawer) {

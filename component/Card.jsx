@@ -1,25 +1,6 @@
-import React, { useEffect, useState } from 'react'
-
-const Card = (props) => {
-  const [date, setDate] = useState(new Date());
-  function refreshClock() {
-    setDate(new Date());
-  }
-  useEffect(() => {
-    const timerId = setInterval(refreshClock, 1000);
-    return function cleanup() {
-      clearInterval(timerId);
-    };
-  }, []);
+const Card = () => {
   return (
-    // <div>
-    //   hello world
-    // </div>
     <>
-      {/* <div className='card_bg'> */}
-      {/* <h2 className='m-0 text-center text-white'>Live Timer</h2> */}
-      {/* <h1 className='m-0 text-center headingName py-5'>{`${date.toLocaleTimeString()}`}</h1> */}
-      {/* </div> */}
       <div className='card_bg d-flex flex-column justify-content-center align-items-center'>
         <h2 style={{ fontFamily: "sans-serif" }} className='bg_dark text-center primary-text pb-5'>About Me!</h2>
         <div className='d-flex align-items-center col-12 justify-content-center flex-wrap card_container'>

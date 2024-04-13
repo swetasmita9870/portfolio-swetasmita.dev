@@ -1,4 +1,3 @@
-import React from 'react'
 import { Profile } from '../lib/config'
 
 const Dvhomecomp1 = () => {
@@ -17,7 +16,7 @@ const Dvhomecomp1 = () => {
       </div>
 
         <div className='col-12 col-md-6 px-0 card_bg d-flex justify-content-center align-items-center position-relative'>
-        <img className='home-img-inner' width={"50%"} src={Profile} />
+          <img className='home-img-inner' width={"50%"} src={Profile} alt="Swetasmita Ranjan Sahoo" />
       </div>
       </div>
       <style jsx>{`
@@ -75,7 +74,6 @@ const Dvhomecomp1 = () => {
         100% {margin-top: 0;}
       }
       @media only screen and (max-width: 767px) {
-        /* CSS rules for phone devices */
         .container{
           height:33vh;
           font-size: 1.26rem;

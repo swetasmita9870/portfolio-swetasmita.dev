@@ -1,8 +1,8 @@
 import React from 'react'
-import DvHeader from '../component/DvHeader'
-import DvHome from '../component/home'
 import CustomHead from '../component/head'
-
+import dynamic from 'next/dynamic';
+const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
+const DvHome = dynamic(() => import('../component/home'), { ssr: false });
 const Home = () => {
   return (
     <>

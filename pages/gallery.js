@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { galletData } from '../lib/gallery';
-import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // Import the styles
-import DvHeader from '../component/DvHeader';
-import DvFooter from '../component/Footer';
+import dynamic from 'next/dynamic';
+const Lightbox = dynamic(() => import('react-image-lightbox'), { ssr: false });
+const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
+const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
 
 const Gallery = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
