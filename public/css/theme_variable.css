@@ -1,19 +1,19 @@
 /* Starstruk */
 
-/* body {
+body {
   --white: #ffffff;
   --theme: #f1f1f1;
   --transparent: transparent;
-  --l_base: #e9b911;
+  --l_base: #F465AF;
   --l_base_dark: #2F0074;
   --l_base_light: #ece5ff;
-  --l_app_bg: #F6F6F6;
+  --l_app_bg: #ffffff;
   --l_app_bg2: #F2F2F2;
   --l_app_bg3: #FAFAFA;
   --l_sidebar_bg: #F2F2F2;
-  --l_app_text: #1E1E1E;
-  --l_strong_app_text: #777777;
-  --l_light_app_text: #777777;
+  --l_app_text: #121212;
+    --l_strong_app_text: #5F596B;
+    --l_light_app_text: #5F596B;
   --l_boxshadow: #00000080;
   --l_light_grey: #818ca3;
   --l_light_grey1: #5B5C7B;
@@ -35,8 +35,8 @@
   --l_app_hover: #ededed;
   --l_dialog: #fff;
   --l_section_bg: #f1f1f1;
-  --l_base_less_opacity: #7321F4ad;
-  --l_app_text_less_opacity: #1E1E1E36;
+  --l_base_less_opacity: #FFF0F8;
+    --l_app_text_less_opacity: #12121236;
   --l_mobile_socialBg: #f1f2f6;
   --l_profileCard_bgColor: #ffffff;
   --l_drawer: #ffffff;
@@ -52,14 +52,14 @@
   --l_upload_bg: #ffffff;
   --l_border_chat: #3B3E4A;
   --l_stories_background: #1A1A1A;
-  --l_overlay: #e9b911;
+  --l_overlay: #F465AF;
   --l_notification: #7321F48d;
-  --l_linear_btn_bg: #e9b911;
-  --l_badge_light: #e9b91190;
-  --title-color: #e9b911;
+  --l_linear_btn_bg: linear-gradient(96.81deg, #F465AF 0%, #F465AF 100%);
+    --l_badge_light: #6FA3FF;
+    --title-color: #F465AF;
   --placeholder: #BBBBBB;
   --hover-bg: #FFCFE0;
-  --gradient: #e9b911;
+  --gradient: linear-gradient(135deg, #F465AF 0%, var(--title-color) 100%);
   --purple: #35163E;
   --light-purple: #A588AD;
   --transparent-border: rgba(7, 6, 8, 0.2);
@@ -70,29 +70,27 @@
   --red_dark: #F42121;
   --green_dark: #00B73E;
   --l_gray_color: #EEEEEE;
-  --l_landing_page: #f7f6f2;
-  --l_landing_signup: #161613;
-  --l_landing_earn: #ecebe7;
-  --l_landing_border: #1016131A;
-  --l_landing_text: #e9ba1121;
-} */
+  --l_green2: #31CF7A;
+    --text_secondary_light: #5F596B;
+    --disabled_plan_bg: #F8F8F8;
+  }
 
-body {
+body.dark_theme {
   --white: #ffffff;
   --theme: var(--l_app_bg);
   --transparent: transparent;
-  --l_base: #e9b911;
+  --l_base: #F465AF;
   --l_base_dark: #2F0074;
   --l_base_light: #ece5ff;
-  --l_app_bg: #0D0D0D;
-  --l_app_bg2: #e9b91180;
+  --l_app_bg: #1B0E1F;
+    --l_app_bg2: #36223C;
   --l_app_bg3: #1B0E1F;
   --l_sidebar_bg: #26172A;
   --l_phoneInput: #18191A;
-  --l_app_text: #FFFFFF;
-  --l_strong_app_text: #777777;
-  --l_light_app_text: #777777;
-  --l_boxshadow: #ecf408;
+  --l_app_text: #F5D0FF;
+    --l_strong_app_text: #F465AF;
+    --l_light_app_text: #836B8A;
+    --l_boxshadow: #00000080;
   --l_light_grey: #818ca3;
   --l_light_grey1: #5B5C7B;
   --l_light_grey2: #485164;
@@ -102,7 +100,7 @@ body {
   --l_white_o80: rgb(255 255 255/ 0.8);
   --l_light_blue: #6c757d;
   --l_white_o11: rgba(0, 0, 0, 0.11);
-  --l_border: #5A5A5A;
+  --l_border: #3C2342;
   --l_lightgrey_bg: #251729;
   --l_base_o60: #7321F499;
   --l_red: #ff0000;
@@ -113,10 +111,10 @@ body {
   --l_app_hover: #ededed;
   --l_dialog: #232936;
   --l_section_bg: rgba(245, 208, 255, 0.05);
-  --l_base_less_opacity: #e9ba1121;
-  --l_app_text_less_opacity: #FFFFFF36;
+  --l_base_less_opacity: #FFF0F8;
+    --l_app_text_less_opacity: #f5d0ff36;
   --l_mobile_socialBg: #8e8e931f;
-  --l_profileCard_bgColor: #151414;
+  --l_profileCard_bgColor: #251729;
   --l_drawer: #1B0E1F;
   --l_altertative_text_color: #000;
   --l_input_bg_color: #313236;
@@ -125,17 +123,17 @@ body {
   --l_breadcrum_deactive: #6c757d;
   --l_searchpage_textarea: #18191A;
   --l_mobile_header: #251729;
-  --l_upload_bg: #1E1E1E;
+  --l_upload_bg: #121212;
   --l_border_chat: #3B3E4A;
   --l_stories_background: #1A1A1A;
-  --l_overlay: #e9b911;
+  --l_overlay: #F465AF;
   --l_notification: #7321F48d;
-  --l_linear_btn_bg: #e9b911;
-  --l_badge_light: #e9b91173;
-  --title-color: #e9b911;
+  --l_linear_btn_bg: linear-gradient(96.81deg, #F465AF 0%, #620234 100%);
+    --l_badge_light: #d43aff73;
+    --title-color: #F465AF;
   --placeholder: #836B8A;
   --hover-bg: #FFCFE0;
-  --gradient: #e9b911;
+  --gradient: linear-gradient(135deg, #F465AF 0%, var(--title-color) 100%);
   --purple: #35163E;
   --light-purple: #A588AD;
   --transparent-border: rgba(166, 143, 173, 0.20);
@@ -146,9 +144,7 @@ body {
   --red_dark: #F42121;
   --green_dark: #00B73E;
   --l_gray_color: #251729;
-  --l_landing_page: #f7f6f2;
-  --l_landing_signup: #161613;
-  --l_landing_earn: #ecebe7;
-  --l_landing_border: #1016131A;
-  --l_landing_text: #e9ba1121;
-}
+  --l_green2: #31CF7A;
+    --text_secondary_light: #836B8A;
+    --disabled_plan_bg: #2A192F;
+  }

@@ -4,10 +4,10 @@ const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
 const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
 const Project = dynamic(() => import('../component/Project'), { ssr: false });
 const project
-  = () => {
+  = (props) => {
     return (
       <div>
-        <DvHeader />
+        <DvHeader {...props} />
         <Project fromPage />
         <DvFooter />
       </div>

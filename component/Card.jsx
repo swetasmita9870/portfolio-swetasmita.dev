@@ -26,7 +26,7 @@ const Card = () => {
       border-radius:22px;
       padding:1rem;
       width:25%;
-      min-height:35vh;
+      height:40vh;
      }
      .card_container{
       gap:3rem;
@@ -36,20 +36,11 @@ const Card = () => {
       transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
       color: #000;
     }
-    .text-shadow{text-shadow: 5px 6px 8px black;}
     .headingName{
     color: black;
-    text-shadow: 2px 2px 3px yellow, 2px 1px 5px yellow;
     animation: glow 5s linear infinite;
     }
-    @keyframes glow {
-      0% {
-        filter: hue-rotate(0deg);
-      }
-      100% {
-        filter: hue-rotate(360deg);
-      }
-    }
+    
     @media only screen and (max-width: 767px) {
       /* CSS rules for phone devices */
       :global(.bulk__message__card){

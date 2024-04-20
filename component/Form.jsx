@@ -25,7 +25,7 @@ const Form = () => {
 
   return (
     <>
-      <h2 className='card_bg text-white text-center m-0 py-5'>Lets Talk</h2>
+      <h2 className='card_bg text-app text-center m-0 py-5'>Lets Talk</h2>
       <div className='card_bg pb-5'>
         <div className='d-flex flex-wrap flex-column justify-content-center align-items-center'>
           <div className='d-flex flex-wrap flex-column'>
@@ -105,11 +105,11 @@ const Form = () => {
         }
         
         .form__field {
-          border: 1px solid silver !important;
+          border: 1px solid var(--l_border) !important;
           border-radius: 5px;
           box-sizing: border-box;
           color: #fff;
-          background-color: #212529;
+          background-color: var(--l_input_bg);
           height: 40px;
           width:30vw;
           padding: 15px;
@@ -141,14 +141,14 @@ const Form = () => {
         }
         
         .form__field:focus {
-          border: 2px solid gold !important;
-          background-color: #212529;
+          border: 1px solid var(--l_base) !important;
+          background-color: var(--l_drawer);
           outline: none;
         }
         
         .form__field:focus ~ .form__label {
-          background-color: #212529;
-          color: gold;
+          background-color: var(--l_drawer);
+          color: var(--l_base);
           font-size: .9em;
           margin-left: 10px;
           padding: 0 10px;

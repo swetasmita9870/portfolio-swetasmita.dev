@@ -1,6 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { getCookie } from '../lib/session'
 
 export default function Document() {
+  let userTheme = getCookie('userTheme')
   return (
     <Html lang="en">
       <Head>
@@ -16,7 +18,9 @@ export default function Document() {
           </> : ''
         }
       </Head>
-      <body>
+      <body
+        className={userTheme === "dark" ? "dark_theme" : ""}
+      >
         <Main />
         <NextScript />
       </body>

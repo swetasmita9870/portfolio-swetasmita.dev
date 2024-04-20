@@ -3,14 +3,36 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import LottieAnumation from './LottieAnumation';
 import avartarAnimation from '../public/Lottie/avatar.json';
+import { dark, light } from '../lib/config';
 
-const MobileNavDrawer = ({ menuList, onClose }) => {
+const MobileNavDrawer = ({ menuList, onClose, changeTheme, theme }) => {
   const router = useRouter();
 
   return (
     <div className="mobile-nav-drawer">
-      <div className="close-icon text-app" onClick={onClose}>
+      <div className="close-icon text-app d-flex align-items-center justify-content-between" onClick={onClose}>
         <p>&#x2716;</p>
+        <div
+          onClick={changeTheme}
+          className="align-self-center cursorPtr"
+          style={{
+            border: "2px solid var(--l_border)",
+            borderRadius: "50%",
+            height: "30px",
+            width: "30px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <img
+            width={15}
+            height={15}
+            src={theme !== "light" ? dark : light}
+            style={{ borderRadius: "50%" }}
+          />
+        </div>
+
       </div>
       <div className="menu-list d-flex flex-column">
         {menuList.map((data, i) => (
@@ -23,7 +45,7 @@ const MobileNavDrawer = ({ menuList, onClose }) => {
   );
 };
 
-const DvHeader = () => {
+const DvHeader = (props) => {
   const router = useRouter();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
@@ -40,7 +62,7 @@ const DvHeader = () => {
     setDrawerOpen(!isDrawerOpen);
   };
   return (
-    <div className='col-12 sticky-top d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "var( --l_profileCard_bgColor)" }}>
+    <div className='col-12 sticky-top d-flex justify-content-between align-item-center' style={{ height: "12vh", background: "var( --l_background_oversection)" }}>
       <div className='col-12 col-md-4 d-flex justify-content-between align-items-center'>
         <h1 className='text-base'>SwetaSmita</h1>
         <div className='d-flex d-md-none justify-content-end align-items-end'>
@@ -58,11 +80,32 @@ const DvHeader = () => {
           ))}
         </div>
         <div className='col-6 d-none d-md-flex px-4 justify-content-end align-items-end'>
+          <div
+            onClick={props.changeTheme}
+            className="align-self-center cursorPtr"
+            style={{
+              border: "2px solid var(--l_border)",
+              borderRadius: "50%",
+              height: "30px",
+              width: "30px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <img
+              width={15}
+              height={15}
+              src={props.theme !== "light" ? dark : light}
+              style={{ borderRadius: "50%" }}
+            />
+          </div>
+
           <LottieAnumation width={80} height={80} animationName={avartarAnimation} />
         </div>
       </div>
       {isDrawerOpen && (
-        <MobileNavDrawer menuList={menuList} onClose={toggleDrawer} />
+        <MobileNavDrawer menuList={menuList} onClose={toggleDrawer} changeTheme={props.changeTheme} theme={props.theme} />
       )}
       <style jsx>{`
         .list_none{
@@ -80,7 +123,7 @@ const DvHeader = () => {
           right: 0;
           width: 80%;
           height: 100%;
-          background: var(--l_profileCard_bgColor);
+          background: var(--l_background_oversection);
           padding: 20px;
           box-shadow: -1px 0 10px rgba(0, 0, 0, 0.1);
           z-index: 1000;

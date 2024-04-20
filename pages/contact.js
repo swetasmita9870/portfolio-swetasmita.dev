@@ -6,7 +6,7 @@ import Form from '../component/Form';
 import dynamic from 'next/dynamic';
 const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
 const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
-const contact = () => {
+const contact = (props) => {
   const contactList = [
     { title: "Chat", icon: Whatsapp3d, link: "https://wa.me/+919337127197", description: "Dm Me !!" },
     { title: "Email", icon: Gmail1, link: "mailto:swetasmita987@gmail.com", description: "swetasmita987@gmail.com" },
@@ -27,7 +27,7 @@ const contact = () => {
   };
   return (
     <div>
-      <DvHeader />
+      <DvHeader {...props} />
       <div>
         <Lottie options={defaultOptions} height={300} width={300} />
       </div>

@@ -6,7 +6,7 @@ const Lightbox = dynamic(() => import('react-image-lightbox'), { ssr: false });
 const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
 const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
 
-const Gallery = () => {
+const Gallery = (props) => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [currentSlideData, setCurrentSlideData] = useState(galletData[0].url);
@@ -21,7 +21,7 @@ const Gallery = () => {
   };
   return (
     <>
-      <DvHeader />
+      <DvHeader {...props} />
       <div className='col-12 d-flex gap-4 flex-wrap align-items-center justify-content-center'>
         {galletData.map((data, index) => (
           <div className='gallery-item' key={index} onClick={() => openLightbox(index)}>

@@ -3,11 +3,11 @@ import ReelsList from '../../component/reels/ReelList'
 import DvHeader from '../../component/DvHeader'
 import { useIsMobileView } from '../../hook/mobileview';
 
-const reels = () => {
+const reels = (props) => {
   const mobileView = useIsMobileView();
   return (
     <div className='overflow-hidden'>
-      {!mobileView ? <DvHeader /> : ""}
+      {!mobileView ? <DvHeader {...props} /> : ""}
       <ReelsList />
     </div>
   )

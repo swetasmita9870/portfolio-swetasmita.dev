@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import React from 'react'
 const DvHeader = dynamic(() => import('../component/DvHeader'), { ssr: false });
 const DvFooter = dynamic(() => import('../component/Footer'), { ssr: false });
-const Blog = () => {
+const Blog = (props) => {
   const blogData = [
     {
       "id": "Portfolio",
@@ -140,7 +140,7 @@ const Blog = () => {
   ]
   return (
     <>
-      <DvHeader />
+      <DvHeader {...props} />
       <div className='col-12 d-flex flex-wrap justify-content-around'>
         <div className='col-12 col-md-9 col-lg-9 d-flex flex-wrap justify-content-around'>
           {blogData.map((data, i) => {

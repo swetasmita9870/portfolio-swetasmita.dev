@@ -1,4 +1,5 @@
 import { Profile } from '../lib/config'
+import CalendlyButton from './CalendlyButton'
 
 const Dvhomecomp1 = () => {
   return (
@@ -12,6 +13,7 @@ const Dvhomecomp1 = () => {
             <div className="second"><div className='text-shadow text-center'>Frontend Developer 🧑‍💻</div></div>
             <div className="third"><div className='text-shadow text-center'>Web Developer ✡️</div></div>
           </section>
+            <CalendlyButton />
         </div>
       </div>
 

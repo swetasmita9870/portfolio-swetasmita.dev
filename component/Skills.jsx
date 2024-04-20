@@ -52,7 +52,7 @@ const Skills = () => {
   }]
   return (
     <div className='col-12 card_bg pt-5 '>
-      <h2 className='text-white text-center py-5'>My Skills</h2>
+      <h2 className='text-app text-center py-5'>My Skills</h2>
       <div className='d-flex flex-wrap justify-content-center'>
         {skillsData.map((data) => {
           return <div className='col-11 col-md-3 p-1 col-md-2 m-2 cover-pill d-flex flex-row align-items-center radius10'>
@@ -64,10 +64,10 @@ const Skills = () => {
                   height={50} alt="wallet_icon"
                 />
               </div>
-              <p className='text-center bold text-uppercase'>{data.Name}</p>
+              <p className='text-center text-app bold text-uppercase'>{data.Name}</p>
             </div>
             <div>
-              <p>{data.description}</p>
+              <p className='text-app'>{data.description}</p>
             </div>
           </div>
         })}

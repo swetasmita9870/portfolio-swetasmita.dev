@@ -3,6 +3,7 @@ import { FaceBook, GitHubLogo, Gmail1, Instagram, LinkedIn, Whatsapp3d, Youtube 
 import Link from 'next/link';
 import LottieAnumation from './LottieAnumation';
 import callingAnimation from '../public/Lottie/calling.json';
+import CalendlyButton from './CalendlyButton';
 
 const DvFooter = () => {
   const footerIcons = [
@@ -63,7 +64,7 @@ const DvFooter = () => {
           <h2>Quick Links</h2>
           <div className="menu-list d-flex flex-column">
             {menuList.map((data, i) => (
-              <Link prefetch={true} href={data.link} key={i} className='text-left p-2 text-app'  >
+              <Link prefetch={true} href={data.link} key={i} className='text-left p-2 text-white'>
                 {data.title}
               </Link>
             ))}
@@ -73,10 +74,11 @@ const DvFooter = () => {
           <h2>Contact me</h2>
           <p>Chandigarh, India</p>
           <p>swetasmita987@gmail.com</p>
-          <div className='d-flex mt-3 justify-content-center justify-content-md-start'>
+          <div className='d-flex mt-3 justify-content-center justify-content-md-start pb-4'>
             <LottieAnumation width={30} height={30} animationName={callingAnimation} />
             <p className='mb-0 mx-2 bold text-success mt-1'>+91-9337127197</p>
           </div>
+          <CalendlyButton />
         </div>
         <div className="footer-section">
           <h2>©Swetasmita</h2>
@@ -85,8 +87,8 @@ const DvFooter = () => {
       </div>
       <style jsx>{`
         .footer-container {
-          background: var(--l_profileCard_bgColor);
-          color: var(--l_textColor);
+          background: linear-gradient(180deg, #F465AF 0%, #E04EB0 95.52%);
+          color: var(--white);
           padding: 20px;
           display: flex;
           flex-direction: column;
