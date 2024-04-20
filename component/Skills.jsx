@@ -55,7 +55,7 @@ const Skills = () => {
       <h2 className='text-app text-center py-5'>My Skills</h2>
       <div className='d-flex flex-wrap justify-content-center'>
         {skillsData.map((data) => {
-          return <div className='col-11 col-md-3 p-1 col-md-2 m-2 cover-pill d-flex flex-row align-items-center radius10'>
+          return <div className='col-11 card_bg col-md-3 p-1 col-md-2 m-2 cover-pill d-flex flex-row align-items-center radius10'>
             <div className='col-4 col-md-4 px-0 d-flex flex-column'>
               <div className='d-flex align-item-center justify-content-center col-12 pt-4'>
                 <img

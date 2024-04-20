@@ -49,6 +49,8 @@ export default function App({ Component, pageProps }) {
       <title>{APP_NAME}</title>
     </Head>
     <NextNProgress color="var(--l_base)" />
+    <div id="body">
     <Component {...pageProps} changeTheme={changeTheme} theme={theme} />
+    </div>
   </>)
 }
