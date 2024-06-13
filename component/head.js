@@ -46,13 +46,13 @@ const CustomHead = (props) => {
       }}
       />
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
+      {/* <meta name="twitter:card" content="summary_large_image" /> */}
+      {/* <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
       <meta name="twitter:description" content={props.description || defaultDescription} />
       <meta name="twitter:url" content={props.url || defaultOGURL} />
       <meta name="twitter:site" content={props.url || defaultOGURL} />
       <meta name="twitter:creator" content={props.url || defaultOGURL} />
-      <meta name="twitter:image" content={props.twitterUrl || props.ogImage || defaultOGImage} />
+      <meta name="twitter:image" content={props.twitterUrl || props.ogImage || defaultOGImage} /> */}
 
       {/* Open Graph / Facebook */}
       <meta property="og:locale" content={props.language || "en"} />
