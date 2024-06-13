@@ -7,9 +7,9 @@ const defaultTitle = "SWETASMITA RANJAN SAHOO-Frontend Developer";
 const defaultOGTitle = "SWETASMITA RANJAN SAHOO";
 const defaultDescription = "Welcome to my portfolio, where I showcase my professional and personal achievements. As you explore my work, you'll find a diverse range of projects, from web development and design to writing and marketing. With a keen eye for detail and a passion for delivering quality work, I take pride in everything I create. Whether you're a potential client or just curious about my skills and experience, I invite you to take a look and see what I have to offer. Thank you for visiting!";
 const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app/";
-const defaultOGImage = og_image;
+const defaultOGImage = 'https://video.gumlet.io/65acc8e4233c3b07eff9f7a9/65acf546233c3b07effa6ecb/thumbnail-1-0.png?v=1705833860579';
 const defaultAltText = "SwETASMITA RANJAN SAHOO";
-const OG_LOGO = og_image;
+const OG_LOGO = 'https://video.gumlet.io/65acc8e4233c3b07eff9f7a9/65acf546233c3b07effa6ecb/thumbnail-1-0.png?v=1705833860579';
 const CustomHead = (props) => {
   const { userName, username } = props;
 
@@ -46,13 +46,13 @@ const CustomHead = (props) => {
       }}
       />
       {/* Twitter */}
-      {/* <meta name="twitter:card" content="summary_large_image" /> */}
-      {/* <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
       <meta name="twitter:description" content={props.description || defaultDescription} />
       <meta name="twitter:url" content={props.url || defaultOGURL} />
       <meta name="twitter:site" content={props.url || defaultOGURL} />
       <meta name="twitter:creator" content={props.url || defaultOGURL} />
-      <meta name="twitter:image" content={props.twitterUrl || props.ogImage || defaultOGImage} /> */}
+      <meta name="twitter:image" content={props.twitterUrl || props.ogImage || defaultOGImage} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:locale" content={props.language || "en"} />
