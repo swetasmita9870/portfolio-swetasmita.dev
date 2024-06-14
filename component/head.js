@@ -19,33 +19,11 @@ const CustomHead = (props) => {
       <title>{userName || username || defaultTitle}</title>
       <meta name="description" content={props.description || defaultDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-      <meta name="robots" content="noindex" />
-      {props.metaTags && props.metaTags.length > 0 && (
-        <meta name="keywords" content={props.metaTags.join(",")}></meta>
-      )}
       <link rel="canonical" href={defaultOGURL} />
       <meta property="fb:app_id" content={"1344493016062063"} />
       <link href={og_image} rel="icon" />
-      <Script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Swetasmita Ranjan Sahoo",
-          "url": "https://portfolio-swetasmita-dev.vercel.app/",
-          "image": og_image,
-          "jobTitle": "Frontend Developer",
-          "sameAs": [
-            "https://www.linkedin.com/in/swetasmita-ranjan-sahoo-55811a173/",
-            "https://github.com/swetasmita9870",
-            "LinkToYourTwitterProfile"
-          ],
-          "alumniOf": {
-            "@type": "Siksha 'O' Anusanshan UNiversity",
-            "name": "MCA"
-          }
-        })
-      }}
-      />
+      <meta name="robots" content="noindex" />
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
