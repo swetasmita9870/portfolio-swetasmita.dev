@@ -10,6 +10,8 @@ const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app/";
 const defaultOGImage = og_image;
 const defaultAltText = "SwETASMITA RANJAN SAHOO";
 const OG_LOGO = og_image;
+const ogImage = props.ogImage || props.graphUrl || props.facebookUrl || OG_LOGO
+
 const CustomHead = (props) => {
   const { userName, username } = props;
 
@@ -31,7 +33,7 @@ const CustomHead = (props) => {
       <meta name="twitter:url" content={props.url || defaultOGURL} />
       <meta name="twitter:site" content={props.url || defaultOGURL} />
       <meta name="twitter:creator" content={props.url || defaultOGURL} />
-      <meta name="twitter:image" content={props.twitterUrl || props.ogImage || defaultOGImage} />
+      <meta name="twitter:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:locale" content={props.language || "en"} />
@@ -40,8 +42,8 @@ const CustomHead = (props) => {
       <meta property="og:description" content={props.description || defaultDescription} />
       <meta property="og:url" content={props.url || defaultOGURL} />
       <meta property="og:site_name" content={defaultTitle} />
-      <meta property="og:image" content={props.ogImage || props.graphUrl || props.facebookUrl || OG_LOGO} />
-      <meta property="og:image:secure_url" content={props.ogImage || props.facebookUrl || props.graphUrl || OG_LOGO} />
+      <meta property="og:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
+      <meta property="og:image:secure_url" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
       <meta property="og:image:alt" content={props.altText || defaultAltText} />
