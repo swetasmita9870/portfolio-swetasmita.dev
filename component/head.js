@@ -10,11 +10,10 @@ const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app/";
 const defaultOGImage = og_image;
 const defaultAltText = "SwETASMITA RANJAN SAHOO";
 const OG_LOGO = og_image;
-const ogImage = props.ogImage || props.graphUrl || props.facebookUrl || OG_LOGO
 
 const CustomHead = (props) => {
   const { userName, username } = props;
-
+  const ogImage = props.ogImage || props.graphUrl || props.facebookUrl || OG_LOGO
   return (
     <NextHead>
       <meta charSet="UTF-8" />
