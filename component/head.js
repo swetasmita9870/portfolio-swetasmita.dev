@@ -19,6 +19,7 @@ const CustomHead = (props) => {
       <title>{userName || username || defaultTitle}</title>
       <meta name="description" content={props.description || defaultDescription} />
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+      <meta name="robots" content="noindex" />
       {props.metaTags && props.metaTags.length > 0 && (
         <meta name="keywords" content={props.metaTags.join(",")}></meta>
       )}
