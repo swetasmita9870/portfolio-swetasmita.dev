@@ -33,7 +33,7 @@ const CustomHead = (props) => {
       <meta name="twitter:domain" content="portfolio-swetasmita-dev.vercel.app" />
       <meta name="twitter:site" content={props.url || defaultOGURL} />
       <meta name="twitter:creator" content={props.url || defaultOGURL} />
-      <meta name="twitter:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
+      {/* <meta name="twitter:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} /> */}
 
       {/* Open Graph / Facebook */}
       <meta property="og:locale" content={props.language || "en"} />
