@@ -30,6 +30,7 @@ const CustomHead = (props) => {
       <meta name="twitter:title" content={props.pageTitle || props.ogTitle || defaultOGTitle || defaultTitle} />
       <meta name="twitter:description" content={props.description || defaultDescription} />
       <meta name="twitter:url" content={props.url || defaultOGURL} />
+      <meta name="twitter:domain" content="portfolio-swetasmita-dev.vercel.app" />
       <meta name="twitter:site" content={props.url || defaultOGURL} />
       <meta name="twitter:creator" content={props.url || defaultOGURL} />
       <meta name="twitter:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
