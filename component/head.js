@@ -6,14 +6,13 @@ import Script from "next/script";
 const defaultTitle = "SWETASMITA RANJAN SAHOO-Frontend Developer";
 const defaultOGTitle = "SWETASMITA RANJAN SAHOO";
 const defaultDescription = "Welcome to my portfolio, where I showcase my professional and personal achievements. As you explore my work, you'll find a diverse range of projects, from web development and design to writing and marketing. With a keen eye for detail and a passion for delivering quality work, I take pride in everything I create. Whether you're a potential client or just curious about my skills and experience, I invite you to take a look and see what I have to offer. Thank you for visiting!";
-const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app";
+const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app/";
 const defaultOGImage = og_image;
 const defaultAltText = "SwETASMITA RANJAN SAHOO";
 const OG_LOGO = og_image;
-
 const CustomHead = (props) => {
   const { userName, username } = props;
-  const ogImage = props.ogImage || props.graphUrl || props.facebookUrl || OG_LOGO
+
   return (
     <NextHead>
       <meta charSet="UTF-8" />
@@ -32,7 +31,7 @@ const CustomHead = (props) => {
       <meta name="twitter:url" content={props.url || defaultOGURL} />
       <meta name="twitter:site" content={props.url || defaultOGURL} />
       <meta name="twitter:creator" content={props.url || defaultOGURL} />
-      <meta name="twitter:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
+      <meta name="twitter:image" content={props.twitterUrl || props.ogImage || defaultOGImage} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:locale" content={props.language || "en"} />
@@ -41,8 +40,8 @@ const CustomHead = (props) => {
       <meta property="og:description" content={props.description || defaultDescription} />
       <meta property="og:url" content={props.url || defaultOGURL} />
       <meta property="og:site_name" content={defaultTitle} />
-      <meta property="og:image" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
-      <meta property="og:image:secure_url" content={ogImage?.includes('http') ? ogImage : defaultOGURL + ogImage} />
+      <meta property="og:image" content={props.ogImage || props.graphUrl || props.facebookUrl || OG_LOGO} />
+      <meta property="og:image:secure_url" content={props.ogImage || props.facebookUrl || props.graphUrl || OG_LOGO} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
       <meta property="og:image:alt" content={props.altText || defaultAltText} />
