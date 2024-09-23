@@ -7,9 +7,9 @@ const defaultTitle = "SWETASMITA RANJAN SAHOO-Frontend Developer";
 const defaultOGTitle = "SWETASMITA RANJAN SAHOO";
 const defaultDescription = "Welcome to my portfolio, where I showcase my professional and personal achievements. As you explore my work, you'll find a diverse range of projects, from web development and design to writing and marketing. With a keen eye for detail and a passion for delivering quality work, I take pride in everything I create. Whether you're a potential client or just curious about my skills and experience, I invite you to take a look and see what I have to offer. Thank you for visiting!";
 const defaultOGURL = "https://portfolio-swetasmita-dev.vercel.app/";
-const defaultOGImage = og_image;
+const defaultOGImage = 'https://photo.fanzly.app/eyJrZXkiOiJwcm9maWxlLzE3MTA0OTg5MzU0NDNfMTcxMDQ5ODkzNTQ0M18yOC5qcGciLCJxdWFsaXR5Ijo4MCwiZm9ybWF0Ijoid2VicCIsIndpZHRoIjoxMjAwLCJoZWlnaHQiOjYzMH0=';
 const defaultAltText = "SwETASMITA RANJAN SAHOO";
-const OG_LOGO = og_image;
+const OG_LOGO = 'https://photo.fanzly.app/eyJrZXkiOiJwcm9maWxlLzE3MTA0OTg5MzU0NDNfMTcxMDQ5ODkzNTQ0M18yOC5qcGciLCJxdWFsaXR5Ijo4MCwiZm9ybWF0Ijoid2VicCIsIndpZHRoIjoxMjAwLCJoZWlnaHQiOjYzMH0=';
 const CustomHead = (props) => {
   const { userName, username } = props;
 
