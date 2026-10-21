@@ -39,6 +39,8 @@ const config: Config = {
         "spin-slow": "spin 14s linear infinite",
         "portrait-in": "portraitIn 1s cubic-bezier(0.16,1,0.3,1) both",
         "pulse-ring": "pulseRing 2.8s ease-out infinite",
+        aurora: "aurora 14s ease-in-out infinite",
+        shimmer: "shimmer 2.4s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -60,6 +62,14 @@ const config: Config = {
         pulseRing: {
           "0%": { transform: "scale(0.92)", opacity: "0.55" },
           "70%, 100%": { transform: "scale(1.12)", opacity: "0" },
+        },
+        aurora: {
+          "0%, 100%": { transform: "translate3d(0,0,0) scale(1)" },
+          "50%": { transform: "translate3d(-4%, 6%, 0) scale(1.08)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
     },

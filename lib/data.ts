@@ -1,7 +1,7 @@
 export const site = {
   name: "Swetasmita Ranjan Sahoo",
   shortName: "Swetasmita",
-  role: "Frontend Developer",
+  role: "Senior Frontend Developer",
   location: "Chandigarh, India",
   email: "swetasmita987@gmail.com",
   phone: "+91 9337127197",
@@ -47,25 +47,36 @@ export const aboutHighlights = [
   "Collaborate with teams to ship features from idea to production.",
 ];
 
-export const skills = [
-  "TypeScript",
-  "JavaScript (ES6+)",
-  "React",
-  "Next.js",
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "Redux",
-  "REST APIs",
-  "Responsive design",
-  "Web accessibility (WCAG)",
-  "axe-core",
-  "Playwright",
-  "Strapi",
-  "Stripe",
-  "Git & GitHub",
-  "Vercel",
+export const stats = [
+  { value: "5", label: "Years of experience" },
+  { value: "8+", label: "Projects shipped" },
+  { value: "3", label: "Companies" },
+  {
+    value: "Senior Frontend",
+    label: "Tulyfreehome · Appscrip",
+  },
 ];
+
+export const skillGroups = [
+  {
+    title: "Languages",
+    items: ["TypeScript", "JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    title: "Frameworks",
+    items: ["React", "Next.js", "Tailwind CSS", "Redux"],
+  },
+  {
+    title: "Quality",
+    items: ["WCAG", "axe-core", "Playwright", "Responsive design"],
+  },
+  {
+    title: "Product",
+    items: ["REST APIs", "Strapi", "Stripe", "Git & GitHub", "Vercel"],
+  },
+];
+
+export const skills = skillGroups.flatMap((group) => group.items);
 
 export type Project = {
   name: string;
@@ -96,5 +107,19 @@ export const projects: Project[] = [
       "Weather lookup deployed on Vercel. The live app is behind Vercel deployment protection, so it opens after you sign in.",
     liveUrl: "https://weather-app-swetasmita9870s-projects.vercel.app/",
     tags: ["Vercel"],
+  },
+  {
+    name: "Flow Notes",
+    description:
+      "Canvas-style notes app for capturing and organizing ideas on an interactive board.",
+    liveUrl: "https://flow-notes-psi.vercel.app/",
+    tags: ["Next.js", "React", "Canvas"],
+  },
+  {
+    name: "Meridian Market",
+    description:
+      "Marketplace experience with product browsing and a polished shopping flow, deployed on Vercel.",
+    liveUrl: "https://meridian-market.vercel.app/",
+    tags: ["Next.js", "Tailwind", "Vercel"],
   },
 ];

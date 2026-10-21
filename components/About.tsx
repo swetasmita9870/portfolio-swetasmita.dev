@@ -1,64 +1,60 @@
-import { aboutHighlights, projects, site, skills } from "@/lib/data";
+import { Briefcase, Building2, FolderKanban, Rocket, Sparkles, Boxes, Users } from "lucide-react";
+import { aboutHighlights, stats } from "@/lib/data";
 import { Reveal } from "@/components/Reveal";
-import { SectionHeader } from "@/components/SectionHeader";
+
+const highlightIcons = [Sparkles, Boxes, Users];
+const statIcons = [Briefcase, Rocket, Building2, FolderKanban];
 
 export function About() {
-  const stats = [
-    { value: String(projects.length).padStart(2, "0"), label: "Selected projects" },
-    { value: String(skills.length).padStart(2, "0"), label: "Core tools" },
-    { value: "IN", label: site.location.split(",")[0] },
-  ];
-
   return (
-    <section id="about" className="border-y border-line py-20 sm:py-28">
+    <section id="about" className="border-b border-white/10 py-20 sm:py-28">
       <div className="section-container">
         <Reveal>
-          <SectionHeader
-            kicker="01 — About"
-            title="Craft over clutter."
-            description="Focused on clarity, performance, and interfaces that scale with the product."
-          />
+          <p className="kicker">About</p>
+          <div className="mt-8 grid gap-12 lg:grid-cols-12">
+            <h2 className="display text-4xl leading-tight sm:text-5xl lg:col-span-5">
+              Interfaces that stay quiet under pressure.
+            </h2>
+            <div className="lg:col-span-6 lg:col-start-7">
+              <p className="text-[15px] leading-relaxed text-ivory-muted">
+                I design and build responsive products with reusable components
+                and a clear structure. From first layout to deployment, the goal
+                is work other engineers can extend — and users can trust.
+              </p>
+              <ul className="mt-8 space-y-3">
+                {aboutHighlights.map((item, i) => {
+                  const Icon = highlightIcons[i] ?? Sparkles;
+                  return (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-ivory transition hover:-translate-y-0.5 hover:border-red-400/30"
+                    >
+                      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-red-300" />
+                      {item}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
-          <Reveal delay={80}>
-            <p className="text-lg leading-relaxed text-ivory-muted">
-              I design and build responsive interfaces that stay calm under real
-              product pressure — reusable components, clear hierarchy, and code
-              that other engineers can extend. From architecture to deployment, I
-              care about how the work feels as much as how it ships.
-            </p>
-          </Reveal>
-          <Reveal delay={120}>
-            <ul className="divide-y divide-line rounded-2xl border border-line bg-ink-raised/50">
-              {aboutHighlights.map((item, i) => (
-                <li
-                  key={item}
-                  className="flex gap-5 px-5 py-4 text-sm leading-relaxed text-ivory"
-                >
-                  <span className="font-medium tabular-nums text-gold">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-
-        <dl className="mt-12 grid gap-4 sm:grid-cols-3">
-          {stats.map((stat, i) => (
-            <Reveal key={stat.label} delay={160 + i * 60}>
-              <div className="surface-card p-6">
-                <dt className="display text-4xl text-ivory sm:text-5xl">
-                  {stat.value}
-                </dt>
-                <dd className="mt-2 text-xs uppercase tracking-[0.18em] text-ivory-dim">
+        <dl className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, i) => {
+            const Icon = statIcons[i] ?? Briefcase;
+            return (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-1 hover:border-red-400/30"
+              >
+                <Icon className="h-5 w-5 text-red-300" />
+                <dt className="display mt-4 text-3xl sm:text-4xl">{stat.value}</dt>
+                <dd className="mt-2 text-[11px] uppercase tracking-[0.16em] text-ivory-dim">
                   {stat.label}
                 </dd>
               </div>
-            </Reveal>
-          ))}
+            );
+          })}
         </dl>
       </div>
     </section>
